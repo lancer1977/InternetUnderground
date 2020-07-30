@@ -1,0 +1,11 @@
+p {
+  
+    
+  }
+.page{  
+  width: 70%;
+  height: 100px;
+  position: absolute;
+  left: 10%;
+  right:10%;
+}

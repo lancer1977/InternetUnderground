@@ -1,0 +1,388 @@
+<HTML>
+<HEAD>
+<TITLE>Cryptography from A to Z  (2/3-97)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=F7F2E0 TEXT=000000 LINK=D07000 ALINK=FFFF00 VLINK=999999>
+
+<TABLE BORDER=0 CELLSPACING=0 BGCOLOR=FDCA8A>
+<TR>
+<TD WIDTH=15>&nbsp;</TD>
+<TD WIDTH=570>
+&nbsp;<BR>
+
+<IMG ALIGN=LEFT WIDTH=350 HEIGHT=125 SRC="title.gif" ALT="Cryptography from A to Z">
+
+
+<BR CLEAR=LEFT>
+<P>
+<BR>
+<FONT FACE="arial, geneva">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+From the bridge of the aircraft carrier Akagi, Adm. Chuichi Nagumo peered across 
+the tranquil Pacific toward Midway Island. Three hours had passed since he 
+launched 108 planes against the tiny atoll. A victory here, the Pearl Harbor veteran 
+knew, would allow his fleet to advance on Hawaii and then threaten the West Coast 
+of the United States. Midway would be Japan's passageway east.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Even though his air strike at dawn had destroyed Midway's fuel supply and 
+decimated the island's fighter squadrons, Nagumo was worried. One of his scouts 
+had reported an enemy aircraft carrier 200 miles away and nearing. No carriers 
+should be nearby, Nagumo thought. He expected no U.S. ships and little resistance. 
+Midway was to be an easy target, like Pearl Harbor had been six months before.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Nagumo didn't know about the codebreaking genius of the Combat Intelligence 
+Unit, a group of three U.S. cryptanalysts in Pearl Harbor's Navy yard. They monitored 
+all major and most minor Japanese fleet circuits and had succeeded in tunneling 
+into the Japanese JN25b cipher and its internal time and place encoding. On May 
+28, 1942, six days before Nagumo aimed his Zeroes at Midway, 
+the codebreakers handed Adm. Chester Nimitz the complete tactical plan the 
+Japanese would use in 
+the battle.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+On the morning of June 4, three carriers from Nimitz's Pacific fleet waited on 
+Admiral Nagumo's flank. Still unaware of the extent of the threat to the northeast, 
+Nagumo recalled his interceptors, which were low on gas after swarming on Midway. 
+He decided they should land, refuel and replace their bombs with the 250 kg 
+torpedoes that could do more damage to enemy ships. The laborious process took 
+two hours.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The delay proved deadly. U.S. planes attacked soon afterwards. Dive-bombers 
+from the Enterprise and Yorktown screamed down and soon three of Nagumo's four 
+carriers were ablaze. Nagumo would say later of the Soryu, "Fires enveloped the 
+whole ship in no time." She 
+was abandoned 30 minutes later. Nagumo's last carrier, Hiryu, sank the next day.
+Thanks to the Pearl Harbor cryptanalysts, Japan's eastward advance had been 
+halted. The remnants of the once-proud First Air Fleet limped west in hasty retreat. 
+An inferior U.S. force had defeated 
+a Japanese armada. American codebreaking had turned the tide of a war.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+World War II was when cryptology, the science of reading and 
+writing secrets, came into its own. By cracking the Nazis' Enigma machine, Allied 
+cryptanalysts saved the world a year of war in Europe. The decoding of Japan's 
+diplomatic ciphers lent a sorely needed edge to the Allied war efforts in the Pacific. 
+Codebreaking also led to the United States shooting down Adm. Isoroku 
+Yamamoto's personal airplane near Guadalcanal, a move that struck a heavy blow to 
+Japanese morale.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Modern wars have highlighted the military benefits of codemaking and 
+codebreaking--together called cryptology--but ciphers and codes have existed for 
+millennia. Julius Caesar wrote to Cicero in a cipher similar to Usenet's ROT-13 that 
+replaced letters with the characters three places further down the alphabet. The 
+Greeks invented a cryptographic signaling system that replaced letters with two-digit 
+numbers from 11 to 55. Roger Bacon, an English monk who lived in the 13th 
+century, wrote: "A man is crazy who writes a secret in any other way than one which 
+will conceal it from the vulgar."
+<P>
+<BR>
+
+<B>Modern Encryption</B>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For all its bewildering jargon, the concept of cryptography is straightforward: a 
+sender wants to write a message and prevent an eavesdropper from understanding 
+it. This can be done through encryption and 
+encipherment, which scramble or rearrange the components of a message, or 
+through a code in which one phrase represents another. Modern computers use 
+ciphers.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ever since the ciphers of the Greeks and Romans, covert writing techniques have 
+relied on the sender and recipient holding identical copies of a "key," usually a 
+secret phrase that both parties must agree on before they can communicate. (The 
+Confederates showed remarkable optimism but little prescience when choosing the 
+phrase "COMPLETE VICTORY" as a key for Civil War ciphers.) That technique, 
+however, limits the system's usefulness. If Alice wants to send a message 
+to Bob and they haven't decided on a key, how can they communicate privately?
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+They can't. An eavesdropper could intercept a key if Bob sent it 
+to Alice. Until, at least, Whitfield Diffie and Martin Hellman invented public-key 
+cryptography in 1975.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Now Alice can send a private message to Bob, even if they've never met. In 
+public-key cryptography, each correspondent owns a 
+private key and a public key, which often is published in a directory. Think of the 
+technique as creating a public mailbox; anyone can drop letters in the mailbox, but 
+only the person with the right key can remove them. This development marked the 
+end of special key couriers with black bags and the beginning of software like Phil 
+Zimmermann's Pretty Good Privacy.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Law enforcement agencies and the National Security Agency weren't exactly 
+pleased by these advancements. They contend that crypto is dangerous in the 
+wrong hands, which is why the Clinton administration continues to treat encryption 
+products as though they were munitions. For export purposes, crypto is treated as a 
+B-2 stealth bomber or an M-1 Abrams tank. An executive order, which succeeded 
+the International Traffic in Arms Regulations (ITAR), requires firms to seek licenses 
+to ship crypto overseas.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The U.S. government's view stems from when encryption was largely the province 
+of soldiers and spies. Indeed, the science of cryptology owes much of its 
+advancement to codebreakers and codemakers who worked for governments. But 
+the world has changed. Computers are no longer a military monopoly. Strong crypto 
+is needed online. Public-key cryptography, besides ensuring that your messages are 
+secure, can also identify who you're communicating with or buying from online. It 
+provides the protocols for scrambling credit-card numbers and generating digital 
+coins. It allows digital signatures, proofs of identity online, digital time stamps and 
+even secure electronic voting. It lets anonymous remailers exist. It provides for 
+secure telnet connections. Crypto provides the foundation 
+and steel girders for an information society.
+<P>
+<BR>
+
+
+<B>Munition or Net-Necessity?</B>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Encryption presents the Feds with an unwelcome dilemma: It yields hefty benefits 
+when used to secure networks, but presents law enforcement agencies with real 
+drawbacks when agents try in vain to read a suspect's seized e-mail.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This schizophrenic policy betrayed itself when the Clinton administration 
+introduced the Clipper Chip in April 1993. The White House tried to pass off the 
+device as offering users superior encryption capabilities at the small price of 
+ensuring continued government access to encrypted communications. The plan, 
+crafted by the NSA, was for the government to hold master copies of keys "in 
+escrow" until needed by law enforcement. The scheme met with savage opposition 
+and the Clipper Chip soon sunk.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+That miserable failure hasn't prevented FBI director Louis Freeh from launching 
+his own attacks on crypto. In alarmist speeches, he repeatedly has linked strong 
+encryption to terrorists such as the Oklahoma City bombers. Freeh told Congress 
+that "unbreakable encryption" will "seriously and fundamentally threaten" public 
+safety. "The potential use of such robust encryption products by a vast array of 
+criminals and terrorists to conceal their criminal communications and information 
+poses an extremely serious and, in my view, unacceptable threat to public safety," 
+he said. (Attorney General Janet Reno and Jamie Gorelick, deputy attorney general, 
+have echoed the FBI chief, and documents that the Electronic Privacy Information 
+Center obtained under the Freedom of Information Act demonstrate that the bureau 
+would like to outlaw encryption that doesn't have a backdoor for the government.)
+Still, Freeh speaks some truth. If crypto is widespread, it <I>will</I> hinder the 
+FBI's ability to wiretap. It <I>will</I> allow miscreants to encrypt files in a manner 
+impervious to prosecutors' most determined attacks. It <I>will</I> make it more 
+difficult for the NSA to scan international phone calls in bulk for code words that 
+hint at illicit activity. It <I>will</I> hinder convictions--but then again, so do 
+Miranda rights. To Freeh, controls on encryption are a matter of restoring the 
+"balance" that's tilting away from law enforcement. "In a very fundamental way, 
+conventional encryption has the effect of upsetting the delicate legal balance of the 
+Fourth Amendment, since when a judge issues a search warrant it will be of no 
+practical value when this type of encryption is encountered," he said.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+What Freeh neglects to mention is how the scales are already tipped in favor of 
+the FBI. Modern communications technologies make it possible for law enforcement 
+agents to collect an unprecedented amount of information on ordinary citizens 
+without their knowledge. Digital technology allows governments to do a much more 
+thorough job of monitoring an ordinary person's actions and opinions than ever 
+before. If the Justice Department ransacks your home, you'll know it. Not so when 
+your communications are digital and are culled from a mail server without 
+your knowledge. Crypto restores the balance of privacy.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"It's an effort by the government to permanently shift the power in favor of 
+surveillance," ACLU privacy guru Don Haines says. "This occurs in a digital medium, 
+where for the first time we can make Big Brother real. Before, the manpower 
+required was prohibitive. Now it's digital. You set your computers to search for a 
+particular sequence of bits."
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This view is not new. Thirty years ago, Alan Westin wrote in his book <I>Privacy 
+and Freedom</I> that "the issue of privacy raised by computerization is whether 
+the increased collection and processing of information for diverse public and private 
+purposes, if not carefully controlled, could lead to a sweeping power of surveillance 
+by government over individual lives and organizational activity."
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+His remarks would prove prophetic.
+
+<P>
+<BR>
+
+<B>U.S. Businesses: Out of Business?</B>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+American businesses have launched their own offensive to 
+support encryption. They contend that their overseas competitors aren't hindered by 
+ITAR and are free to sell strong encryption around the globe. Execs have told 
+Congress for years that current regulations cost U.S. industry millions. They point to 
+RSA Data Security's decision to license its patents to NTT, a Japanese firm. They 
+warn that European or Asian software makers may drive U.S. firms off the encryption 
+playing field forever.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The White House reacted swiftly to the complaints. Clinton recently appointed a 
+crypto-ambassador to lobby foreign governments to comply with U.S. rules and 
+move toward a global framework requiring key escrow. If successful, the move would 
+nullify the industry's argument; after all, foreign firms would be equally hobbled. 
+"What we need to do, very clearly, is to spend a lot of time with other countries," 
+says William Reinsch, Commerce Department undersecretary for export 
+administration.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The debate grew even hotter when Sen. Conrad Burns (R-Montana) introduced a 
+bill last spring that would lift export controls. With White House arm-twisting--some 
+reports say Clinton himself worked the phones--and adept lobbying by the Justice 
+Department, the legislation perished. Sen. Jim Exon (D-Nebraska), proud sponsor of 
+the Communications Decency Act, personally dealt the death blow by blocking the 
+proposal from leaving the Commerce Committee. Burns plans to reintroduce "Pro-
+CODE" legislation this year.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The other way to skirt the export embargo is through the courts. The Electronic 
+Frontier Foundation scored an early victory in its legal attack on the regulations last 
+December when a Federal judge in San Francisco ruled that ITAR was 
+unconstitutional. Another case is moving through the D.C. Federal appeals court, 
+which heard oral arguments last month.
+
+Clinton responded to these legislative and judicial attacks by signing an executive 
+order on Nov. 15, 1996 that he billed as a "compromise," but in truth it only 
+transferred jurisdiction over encryption exports from the State Department to the 
+Commerce Department. The regulations remain almost entirely the same. Clinton 
+wrote at the time, almost parroting Freeh, that "encryption products, when used 
+outside the United States, can jeopardize our foreign policy and national security 
+interests...The exportation of encryption products accordingly must be controlled to 
+further U.S. foreign policy objectives, and promote our national security, including 
+the protection of the safety of U.S. citizens abroad."
+
+Attached to Clinton's executive order was another reason for privacy advocates to 
+cry foul: a "key recovery" proposal. It's Clipper with a twist, a divide-and-conquer 
+strategy designed to splinter an industry previously united in opposition. It slightly 
+relaxed rules on exporting crypto only for those businesses that pledge to devise a 
+key escrow system ensuring government access to keys.  That presents Silicon 
+Valley companies with a kind of unholy prisoner's dilemma--if you don't buy into this 
+plan, your competitor will. Faced with the prospect of hanging together 
+or hanging separately, some hardware manufacturers already have signed up.
+<P>
+<BR>
+
+<B>Security through Complex Mathematics</B>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ironically, the Federal government may have done more than anyone else to 
+further the spread of encryption. In 1975, it unveiled the Data Encryption Standard 
+(DES), arguably still the world's most popular data-scrambling algorithm. It proved 
+reasonably fast and apparently secure, even after the National Security Agency 
+weakened the final version. However, the NSA had made a crucial mistake: they 
+believed the National Institute of Standards and Technology would publish 
+specifications only for a hardware version of DES.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Instead, enough information appeared in the Federal Register to allow 
+programmers to write DES applications. Soon, they became widely available, 
+bringing reasonable digital privacy to anyone with a personal computer. The 
+explosion of personal computers allowed more people to encrypt files with DES than 
+the NSA ever imagined. Chastened officials say privately that, from the standpoint of 
+national security, DES was the worst mistake the NSA ever made.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The debate over what encryption products can be exported revolves around the 
+strength of the application's key; longer keys are more difficult for an attacker to 
+break. The Commerce Department permits firms to export 40-bit DES, or 56-bit 
+DES with a pledge to develop "key recovery" products.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symmetric algorithms like DES use keys often ranging from 40 bits to 128 bits, 
+with an 8-bit key having 28--or 256--possible values. Guessing that key takes 256 
+attempts, with a 50 percent chance of finding the correct key after 128 tries. 
+Beware short key lengths: an attacker with custom hardware can crack a 40-bit DES 
+key in milliseconds and a 56-bit key in just minutes. But a 128-bit key requires an 
+adversary to wait perhaps 1017 years--or longer than the known age of the 
+universe! No wonder the NSA is lamenting. (Public-key cryptosystems like PGP 
+calculate the security of key lengths differently. A 128-bit PGP key is woefully 
+inadequate; a 1024-bit PGP key is reasonably safe.)
+<P>
+<BR>
+
+<B>Crypto-Revolutionaries</B>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The debate swirling through Capitol Hill conference rooms and the corridors of the 
+White House revolves around one basic question: What role should the government 
+play in regulating encryption?
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The founding fathers might be startled by the Byzantine rules. After all, some 
+revolutionaries were cryptographers themselves. Benjamin Franklin in 1781 crafted 
+a substitution cipher based on a 682-character French phrase. James Madison 
+created a code replacing words with two- and three-digit numbers that he used until 
+1793.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+But by far the most remarkable cryptologist of the Revolutionary War was the 
+author of the Declaration of Independence, Thomas Jefferson, who between 1790 
+and 1800 invented a cipher system so far ahead of its time that it remained in use 
+even into the late 20th century.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+He called it his "wheel cypher." One design consisted of a six-inch rod  with 36 
+wheels on it, each with an alphabet scrambled in a different order. The wheels can 
+be rearranged for different correspondents for a total of 36 factorial, or 37 x 1040 
+possible combinations.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In <I>The Codebreakers</I>, historian David Kahn writes: "Jefferson's wheel 
+cypher was far and away the most advanced devised in his day...Had the President 
+recommended his own system to Secretary of State James Madison, he would have 
+endowed his country with a method of secret communication that would almost 
+certainly have withstood any cryptanalytic attack of those days. Instead 
+he appears to have filed andforgotten it."
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+To Jefferson, the will and welfare of the people--not federal bureaucrats--were the 
+prop and purpose of government. His deepest trust lay in the wisdom of citizens to 
+use freedom wisely and in a belief that the essence of democracy was a central 
+government limited in power. Perhaps, when contemplating encryption regulations, 
+Bill Clinton could learn something from his renowned predecessor.
+
+
+
+
+
+
+
+
+
+
+
+<BR>
+&nbsp;
+<CENTER>
+<TABLE BORDER=1 BGCOLOR=000000>
+<TR>
+<TD WIDTH=500 HEIGHT=50 ALIGN=CENTER VALIGN=CENTER>
+<NOBR>
+<A HREF="/iu/home.htm"><IMG BORDER=0 WIDTH=226 HEIGHT=25 SRC="/iu/navart/halfhome.gif" ALT="home"></A><A HREF="/iu/archive/issue15/"><IMG BORDER=0 WIDTH=219 HEIGHT=25 SRC="/iu/navart/halfback.gif" ALT="back to archives"></A>
+</NOBR>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>
+&nbsp;
+</TD>
+<TD WIDTH=15>&nbsp;</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4216807-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</HTML>

@@ -1,0 +1,55 @@
+</HTML>
+<HEAD>
+<TITLE>Cypherpunks Remailers</TITLE>
+<BODY BGCOLOR=000000 TEXT=00FF00 LINK=FFFF00 VLINK=909090>
+
+<B>To remail using the Cypherpunk remailers:</B><BR>
+you need to attach a header, or a series of headers, to your mail message which will direct its path 
+through the maze of machines.
+<P> 
+	The simplest way to tell your e-mail program what to do is to place two colons (::) next to each 
+other on the very first line of the message. On the next line, type, Request-Remailing-To: and the 
+address of the remailer. Skip one line. Then begin your normal message.[
+<P> 
+An example of chain remailing, the most secure form:
+<P>
+<HR SIZE=1 NOSHADE>
+<BR>
+<PRE>
+    From: IU@mcs.net
+    To: remailer@rebma.mn.org
+
+    ::<BR>
+    Request-Remailing-To: remail@xs4all.nl
+
+    ::
+    Request-Remailing-To: recipient@destination.com
+
+    Here is the text of my top-secret message. 
+</PRE>
+<P>
+<HR SIZE=1 NOSHADE>
+<BR>
+	You can use only one remailer, but it is not very secure, because the remailing machine contains 
+both the sender and the destination. Chaining (sending to two or more remailers) is the preferred 
+method, because your return address is completely divorced from the destination.
+<P>
+	You must also be very careful to use the correct spelling and capitalization, as UNIX machines are 
+case-sensitive and will not respond to instructions that they perceive to be spelled incorrectly.
+<P>
+<CENTER>
+<NOBR>
+<A HREF="/iu/home.htm"><IMG BORDER=0 WIDTH=226 HEIGHT=25 SRC="/iu/navart/halfhome.gif" ALT="home"></A><A HREF="index.html#crp"><IMG BORDER=0 WIDTH=219 HEIGHT=25 SRC="/iu/navart/halfback.gif" ALT="back"></A>
+</NOBR>
+</CENTER>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4216807-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</HTML> 

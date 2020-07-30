@@ -1,0 +1,435 @@
+<HTML>
+<HEAD>
+<TITLE>Is the Future Tense?  (5-96)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=C7C2AF BACKGROUND="art/sidetile.gif" TEXT=0D052A LINK=D00000 ALINK=FF0000 VLINK=999999>
+
+
+<TABLE BORDER=0>
+<TR>
+<TD>
+<IMG WIDTH=100 HEIGHT=1 SRC="/iu/navart/spacer.gif">
+</TD>
+
+<TD>
+<IMG WIDTH=500 HEIGHT=150 ALIGN=LEFT SRC="art/title.gif" ALT="Is the Future Tense?" VSPACE=20>
+<P>
+<BR CLEAR=LEFT>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here in the <B>underground</B>, we occasionally wonder, "What's the future going to be like?" Will we be 
+pretty, will we be rich and will the underlying protocols of the Internet remain at the current standards 
+or be updated to allow for greater user capacity? We decided to find out. In this special report, <I>IU</I> 
+takes a look at three important areas of the Internet: the technical backbone, the manner in which 
+commercial entities will manifest their presence and even help pay for the Web, and the impact the 
+Internet will have on society.
+<P>
+<BR>
+<HR SIZE=1 NOSHADE>
+<P>
+<BR>
+<BR>
+
+<TABLE ALIGN=RIGHT BORDER=0>
+<TR>
+<TD>
+<FONT SIZE=7 COLOR=000000>The Future is</FONT> <FONT SIZE=8 COLOR=000000>Unclear</FONT>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 COLOR=000000>by Simson L. Garfinkel</FONT>
+</TD>
+</TR>
+</TABLE>
+<BR CLEAR=RIGHT>
+
+<BR>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The good
+news is that everything is going to change.  The bad news is that everything is going to stay the same.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+That's the word from the gods who run the Internet, the technical-
+standard setters who sit on the Internet Engineering Task Force. The Internet is growing at such a 
+phenomenal rate, and security breaches are becoming so widespread, that fundamental changes need 
+to be made in the underlying infrastructure of the network before it is too late. A new Internet 
+protocol, IPv6, is supposed to fix things -- the current protocol running inside your computer is IPv4. 
+But even though the Powers-That-Be want you to upgrade your software, they can't force you to do it.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG WIDTH=115 HEIGHT=400 ALIGN=RIGHT SRC="art/brain.gif" VSPACE=20 HSPACE=15>
+
+"Clearly, it would be irresponsible to the nth degree to say that the installed applications on 20 million IP hosts 
+would be useless in the future, so we are not going to do that," says Scott Bradner, the Internet Society's vice-president for standards.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Simply put, even the Internet's gods can't upgrade 20 million computers at the same time and expect the 'net to 
+keep working without skipping a beat. After all, they tried that before, on Jan. 1, 1983. It was on that day that the 
+Arpanet, as it was then called, officially stopped using the older Network Control Protocol (NCP) and started using TCP 
+and IPv4 exclusively.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+The reason for the switch was growth: By design, the NCP could only handle 255 computers on the network; by 
+August 1981, there were already 213. You can read all about the plans for the switch in Jon Postel's RFC 801, 
+"NCP/TCP Transition Plan," widely available at hundreds of FTP sites. But despite two years of planning, things did not 
+go smoothly. By the end of February, nearly half of the computers on the Arpanet still couldn't speak the new TCP/IP 
+protocol. Imagine if that happened today: You might upgrade your computer, then discover that you could not send any 
+of your friends e-mail because they hadn't upgraded their own.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+This time around, the new network protocols will take the middle ground. People who use IPv6 will get the new 
+features, but only when they are communicating with other computers on the network that have been similarly  
+upgraded. In order to maintain backward compatibility, every IPv6 implementation will have to include a complete copy 
+of IPv4. And every computer running the new protocol will have two Internet addresses: a 32-bit address for IPv4 and a 
+128-bit address for IPv6.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+But this need to maintain both forward and backward compatibility could cause problems of its own, says John 
+Curran, chief technical officer at Beranek and Newman, the company that invented the Internet: "If IPv6 doesn't give 
+us anything over IPv4, why will anybody switch?"
+<P>
+<BR>
+
+
+<FONT SIZE=5><B>Security: IPv6 vs. IPsec</B></FONT>
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For your average Internet user, 
+the most important feature that's 
+coming with IPv6 is transparent 
+security...sort of.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+IPv4 was never designed to be secure. The designers' idea was that the packet switch network should simply get 
+data from place to place; if programmers wanted particular applications to protect their data from eavesdropping, let 
+them encrypt it. If they wanted protection from spoofing attacks, let them design their own authentication systems.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+But while those arguments sounded good in 1981, few programmers ever took the time to build security into their 
+applications. Today there are large numbers of Internet services, such as the Domain Name System, which put undue 
+trust in protocols that are fundamentally untrustworthy. The result is widespread break-ins.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+IPv6 solves this problem by making the underlying network secure, says Bradner. There's just one problem: There's 
+already a patch for IPv4, called IPsec, that does nearly the same thing.
+"There are roughly a dozen implementations/products that contain IPsec, many of which are encrypting firewall 
+products," says Ran Atkinson, who is overseeing the IPsec effort. Last year, a group of security gurus from the Naval 
+Research Laboratory demonstrated their IPsec implementation at a meeting of the Task Force. There are even versions 
+of IPsec that can be freely downloaded. You'll find them at <A HREF="http://ftp.c2.org">ftp.c2.org</A> in the U.S. and at <A HREF="http://ftp.ripe.net">ftp.ripe.net</A> in Europe.
+<P>
+<BR>
+<BR>
+
+
+<FONT SIZE=5><B>Address and Configuration</B></FONT>
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Two other new features in IPv6 are dramatically larger Internet addresses and the ability for computers on the 'net 
+to configure themselves automatically. IPv4 uses 32-bits for each host address, which in theory allows 4 billion 
+different computers to be on the Internet at the same time. Unfortunately, it doesn't work that way in practice. Many 
+companies have been assigned large blocks of Internet addresses that they have not completely filled. Other 
+companies, meanwhile, want their own blocks of addresses so they can add new computers to their network without 
+hassle.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"At some point it is going to be impossible to assign new blocks to organizations connecting to the Internet," says 
+Curran. Big companies will be hit first, because they need larger blocks.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+With 128-bits for each IPv6 
+address, the new protocol solves the 
+problem. Theoretically, IPv6 allows 340,282,366,921 billion different addresses; even if we were building a 
+billion computers every second, that's still enough addresses to last until the end of the universe.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Existing IPv4 computers communicate with these new IPv6 machines using a technique called address translation. 
+Basically, address translation allows a large company to have thousands of computers appear to be sitting on a single 
+IPv4 address. The only problem with this approach, says Curran, is that it works too well. With address translation, new 
+companies that are moving to the Internet don't need to get a huge block of IPv4 addresses; they just need one.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+IPv6 also brings automatic configuration to Internet users. "You have a Macintosh, you plug in two [Macs into a 
+network], and it works," says Curran, "We are hoping for that with IP." But once again, an auto-configuration system is 
+already in the works for IPv4 called DHCP.
+<P>
+<BR>
+<BR>
+
+
+<FONT SIZE=5><B>No Protocol is an Island</B></FONT>
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IPv6 isn't the only new protocol that's likely to be coming down the 
+pipe in the coming years. IETF is 
+developing protocols for commerce, managing real-time traffic and even secure 
+e-mail. "There are dozens in the works," says Bradner, who notes that there are more than 80 mailing lists discussing 
+the Internet's technical future.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+All of these protocols will deeply affect the Internet's future. Consider a new protocol being developed for resource 
+reservation. This protocol will allow people setting up a video tele-
+conference between Berlin, Boston 
+and Bellevue to reserve the necessary bandwidth so that the picture doesn't drop out. But it's highly unlikely that 
+network companies will let people reserve space on their routers and 
+network backbones without paying 
+for it -- which will require yet another set of protocols.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ultimately, most Internet users 
+probably won't consciously decide to upgrade from IPv4 to IPv6. They'll just buy the next version of their operating 
+system, and discover that the new protocol is already there. And if the Internet gods do their job right, they won't even 
+know that.
+<P>
+<BR>
+
+For more information, check out:<BR>
+Internet Engineering Task Force Home Page<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="http://www.ietf.org/"><TT>http://www.ietf.org/</TT></A>
+<P>
+IPsec specifications:<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="ftp://ds.internic.net/rfc/rfc1825.txt"><TT>ftp://ds.internic.net/rfc/rfc1825.txt</TT></A><BR>
+     <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="ftp://ds.internic.net/rfc/rfc1826.txt"><TT>~rfc1826.txt</TT></A>   <BR>
+       <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="ftp://ds.internic.net/rfc/rfc1827.txt"><TT>~rfc1827.txt</TT></A> 
+<P>
+IPv6 specifications can be found at:<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="http://playground.sun.com/ipng"><TT>http://playground.sun.com/ipng</TT></A>
+
+<P>
+<BR>
+<BR>
+<HR SIZE=1 NOSHADE>
+<P>
+<BR>
+<BR>
+
+<TABLE ALIGN=RIGHT BORDER=0>
+<TR>
+<TD>
+<FONT SIZE=7 COLOR=000000>Beyond</FONT> <FONT SIZE=8 COLOR=000000>Zima</FONT>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 COLOR=000000>by Kathleen Flinn</FONT>
+</TD>
+</TR>
+</TABLE>
+<BR CLEAR=RIGHT>
+<P>
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Don't click here." So read a recent banner ad on c/net. The creators 
+probably thought it would offer a clever tease. But for most surfers, isn't that what most ad banners mean, 
+literally?<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+All right, maybe that's a bit unfair. But consider that in the dark ages of Internet advertising (circa 1994), 
+banners for the much-lauded Zima site on HotWired received a 40 percent click-through rate...or so 
+HotWired told the agency that created the site. That meant nearly half of all the people who saw the Zima 
+banner hit it. <BR>
+
+<IMG WIDTH=127 HEIGHT=400 ALIGN=RIGHT SRC="art/fork.gif" VSPACE=20 HSPACE=15>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, just two years later, advertisers are lucky if banners receive a 5 percent click-through rate. Why the 
+change? Advertising on the 'net is no longer a novelty; it has become part of the landscape. That, it seems, 
+may be part of the problem. At the same time, it might be part of the solution.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"In the future, the lines of advertising and services may blur. What we've been saying (in my company) for a while 
+is that advertising should be so good that people confuse it with the product and service," says G.M. O'Connell, the 
+founder of Modem Media and co-creator of the once lauded Zima site. Future Web advertising might work much in the 
+same way that product placement advertising works in film. For instance, you may be reading about car maintenance 
+at Autosite, not realizing all along that you're being sold to by Saturn through images of the product.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+But does it really matter so long as the "advertisement" provides useful information? After all, that's the whole 
+point of the Internet. Making information available. Sure, John Cameron Swayze gratuitously sucked on a cigarette 
+when he delivered the news back in the 1950s, but people didn't seem to mind. They wanted their TV news. And 
+Camel gave it to them. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+The current explosion of advertising on the 'net could be compared to the boom that took place at the inception of 
+network television broadcasting. Advertising Age at <A HREF="http://www.adage.com/Features/TV/">http://www.adage.com/Features/TV/</A>, provides an excellent 
+history of broadcast advertising and in it, points out that circa 1948, during just the second full year of broadcasting, 
+TVad revenues jumped more than 515 percent.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Since then, advertising has developed into something of an art, buoyed by the pseudoscience of marketing 
+demographics. Media buyers work on formulas, targeting markets in cost per customer. But the Internet doesn't fit into 
+any easy formula; it's an unmeasured, untested frontier with no real figures, no threshold of reasonable expectations. 
+Users can virtually tune out the ads by turning off the graphics on their browsers. Forget any figures you've seen; no 
+one is really sure how much money is being spent on advertising on the Internet. Most industry experts agree that it's 
+probably a large sum of money, but likely dollars misspent.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+"We are at the very dawn of this kind of marketing. Right now, it's very crude," says Andrew Jaffe, executive editor 
+of the ADWEEK magazine group. "People are buying billboards on a highway where it's difficult to see the board." 
+Much of modern advertising, particularly that by large corporations, focuses on creating brand image. Computers 
+simply don't work as a great environment for that kind of advertising, Jaffe says. "That you see Saturn by itself on 
+HotWired doesn't blow you away. If, when you click through and you can develop a relationship with Saturn, maybe join 
+a car owners group, that's another thing. These banners are like invitations to 'come into my shop,' with varying levels 
+of what they do with you when you do go in. Sure, there's a lot of potential to build relationships or conduct direct 
+marketing here," Jaffe continues. "It's the best targeted marketing ever devised. But marketers are going to have to 
+rethink the whole equation."<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Several experts agree the Internet will likely develop along the lines of the cable TV standard. Chris Clark, vice 
+president of the GCI Group in New York, thinks so. His firm puts together Web sites for major companies, most notably 
+Vivarin. While cable TV channels grew exponentially, the Internet, Clark says, "is like cable TV with a thyroid problem."<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"With cable TV, you pay for access, but then part of the cost is offset by ads. The online services are enriched 
+services, so you pay more for those. The model should or could work, except for one thing -- advertisers are trying to 
+provide the content rather than just paying for it. I think that's a huge mistake."<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Clark doesn't believe that any advertiser should expect more attention from Internet users than they expect from TV 
+viewers or magazine readers. Vivarin, for example, puts together small, two-page Web sites that focus on subjects of 
+interest to their primary demographic of college students.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"A site about spring break is closer to their hearts than one about taking caffeine in a pill form," Clark says. He 
+admits that he doesn't expect students to sit around looking at a site that starts out "Welcome to Vivarin.Com!" 
+Especially when it's so simple for users to hyperlink elsewhere. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+O'Connell believes that the days of creating a hot site such as Zima.Com are quickly fading away. "They can't 
+continue to create their own content, it's going to implode on itself. I don't think that it's going to work." <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Companies that have put large sums of money into Web sites are now trying to figure out whether or not those 
+sites have paid off. But that's not something that can really be quantified, says Larry Chase, president and founder of 
+the Online Ad Agency. When Alexander Graham Bell's radical invention hit the mass market,  Chase says there were a 
+lot of newsletters sporting titles such as <I>How to Make Money on the Telephone</I>.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"So maybe someone installed a telephone. Back then, it was probably harder to configure than PPP is now. Then, 
+at the end of the year, they thought, 'Hey, we didn't make any money on it,'" Chase says. "But, on the other hand, 
+that person considers, 'Well, I got to speak to a client in Chicago I didn't know about that gave me an account I'll 
+service for years.' So, what's that worth? That's what companies need to understand."<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+There's one last thing that remains vastly different in terms of how advertising on the 'net will evolve as compared 
+to other mediums: Namely, two-way communication. Input from users will likely be a dramatic influence on the shaping 
+of future campaigns, methods and even the entire advertising paradigm. Internet advertising doesn't have to be an ugly 
+concept. Let advertisers know you appreciate it when they give you content that you want, in an interface that works. 
+Fire back with bile to those companies that clutter up newsgroups with spam or load your mailbox with junk.  After all, 
+Burger King pulled its horrible Herb campaign years ago when people let them know they didn't like it. As their old 
+campaign used to suggest, "have it your way."
+
+
+<P>
+<BR>
+<BR>
+<HR SIZE=1 NOSHADE>
+<P>
+<BR>
+<BR>
+
+<TABLE ALIGN=RIGHT BORDER=0>
+<TR>
+<TD>
+<FONT SIZE=7 COLOR=000000>Digital</FONT> <FONT SIZE=8 COLOR=000000>Culture</FONT>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 COLOR=000000>by Kathleen Flinn</FONT>
+</TD>
+</TR>
+</TABLE>
+<BR CLEAR=RIGHT>
+<P>
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There's one thing you can be sure about with the future of any thing. Namely, that no one really knows what it's going 
+to be. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      That's especially true about the impact that the Internet will have on society at large. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Some futurists might have you believe that the world will radically change in the next few years thanks to online 
+solutions. IU wasn't as certain, so we decided to poll experts from a variety of fields, from technology to marketing to 
+sociology to help with this prediction. What did we discover? The general opinion was that this information-inspired 
+revolution will be quick and thorough, yet gentle on the consumer.<BR>
+<IMG WIDTH=135 HEIGHT=400 ALIGN=RIGHT SRC="art/tech.gif" VSPACE=20 HSPACE=15>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+When will you have to get wired, if you aren't already? Well, probably never. It's the same way you really don't have to
+own a TV or a telephone.  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+The again, contemplate this futuristic vision of a day at the office. Instead of the morning paper with the cup of joe, 
+you go online and flip through NewsPage, and online versions of the Wall Street Journal and The New York Times. 
+Instead of going through the mail, you check your e-mail. The phone is relatively quiet; most of your correspondence 
+comes through Eudora Pro, filtered by subject.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Next you order some flowers for your mother via the Internet and check the whereabouts of a package at the FedEx 
+site. The doctor just prescribed some drug you never heard of, so you go online and look for it, then post to a 
+newsgroup querying about the side effects. You sign up for an upcoming charity event and look at the resumes of  
+interested jobseekers. Then, you spend the afternoon editing work of employees and sending it to their home offices, 
+scattered over four different states. Before heading home, you flip to a Web site to see how the traffic is moving, 
+compiled by computerized sensors along the highway.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sound like the future? What I just described was pretty much a typical day for me. As William Gibson once said, 
+the future is already here; it's just unevenly distributed.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"Most of what's being predicted or touted about the Internet is an exaggeration," says Dinty Moore, author of the 
+<I>The Emperor's Virtual Clothes</I>. "It's neither as wonderful as its proponents claim nor as horrifying as its critics believe. 
+What I've found is that the Internet is not going to change who we are, change the way we think and the way we learn, 
+or change the essential way that we communicate, much less transform our culture, alter the political process or 
+rearrange the balance of world power. What the Internet is doing is making it faster and easier for people with similar 
+interests to find each other and talk to each other, no matter where in the world they live."<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Oh sure, the Internet could also turn you into a hermit. You might choose to  avoid going out of your house 
+altogether,  order your groceries through Peapod, purchase clothes through an online mall and get your sexual needs 
+satiated  (well, sort of), via chat. But while we may take care of rudimentary tasks and gather information online, most 
+of society will still desire interaction. "After sitting at a computer all day, people actually might be more likely to want to 
+go out," notes Neal Goldsmith, president of Tribeca Research Inc., a technology strategy consulting firm and Internet 
+think tank.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+For Luddites who completely reject online technology, the truth is, the Internet can never fully be dismissed. It will 
+still affect their daily lives, if at least from collaborative medical research efforts being conducted online. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+The government keeps archives of records and documents that might also affect Internet naysayers, says Dr. 
+Ogden Forbes, Ph.D., a researcher at Pepperdine University who completed his dissertation on the history of the 
+Internet.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+"In many ways, colleges are the models for how the Internet will eventually weave into our lives." Even on a large 
+campus, the Internet can bring students together with a greater sense of intimacy and level of efficiency. You can find 
+people on a campus of 20,000 with the Internet that you might never have discovered otherwise, he notes.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Those who currently spend a lot of time online may already be taking the vast amount of information available to 
+them for granted. When one <I>IU</I> staffer realized she wouldn't be able to see the Hyakutake comet in March, she 
+immediately responded, "Well, I can look it up on the Web. I'm sure someone will have something on it." Television is 
+a different beast; sure you can tape a show, but what if you forget? It's gone. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Also consider that an estimated one-half of all schools in the United States are now wired for the Internet. In a few 
+years, that number will likely rise to near 100 percent. And most college students already have some access to the 
+'net. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+When this entire group of young people finally come online and have advancements such as high quality real-time 
+audio and video available to them, the world is sure to change forever. In the entertainment industry, the music "play 
+list" and standard music marketing paradigms are already being reconsidered because of the 'net user's ability to 
+download songs in real-time without having to pay for them. Television-computers and video-on-demand, both 
+expected in the near future, are sure to change Blockbuster's rental strategies.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+Eventually, more rudimentary elements of citizenship will be handled through the 'net. Register to vote, heck, even 
+cast your vote online. Pay your taxes, renew your car registration or driver's license. Our <I>IU</I> pundits think it's unlikely 
+that shopping malls will go by the wayside however; even Home Shopping Network and its $4 billion in sales at its 
+heyday didn't kill strip malls. Internet phones will probably not knock out telephones. "There will always be people who 
+prefer faxes, because it's tactile. It has the immediacy of e-mail, but it is something you can feel. So you won't see 
+things go away," says Judy Tashbook, a spokesperson for America Online.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+What will be a notable change in the next few years will be the integration of media into the Internet. Newspapers 
+will likely continue on the declining path on which they started some years ago. Combined with the soaring cost of 
+paper, most media companies have already sought refuge on the Web. "The media will all simply integrate, the lines 
+will be blurred," Goldsmith says.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+Technology is neutral, like a blank canvas. What we do with it is a factor of human nature. The image of the 
+Internet as a vehicle of threat is likely to increase, Forbes says. Having a whole world connected to an admittedly 
+unsteady network allows for the potential danger of technical terrorism. "Right now it's new and we're still exploring its 
+possibilities. It's like the patent medicine of the 19th century -- it's good for all that ails you," Goldsmith says. "But like 
+the patent medicines, they weren't good for all that ails you. In fact, some of it wasn't good for you at all."
+<P>
+<BR>
+<CENTER>
+<FONT SIZE=2>
+
+Senior Editor Kathleen Flinn was previously 
+editor of <I>International Advertising & Media</I> and a staffer at <I>ADWEEK</I> magazines.
+</FONT>
+<P>
+<BR>
+<CENTER>
+<NOBR>
+<A HREF="/iu/home.htm"><IMG BORDER=0 WIDTH=226 HEIGHT=25 SRC="/iu/navart/halfhome.gif" ALT="home"></A><A HREF="/iu/archive/issue6"><IMG BORDER=0 WIDTH=219 HEIGHT=25 SRC="/iu/navart/halfback.gif" ALT="back to archives"></A>
+</NOBR>
+</CENTER>
+</TD>
+
+
+
+<TD>
+<IMG WIDTH=45 HEIGHT=1 SRC="/iu/navart/spacer.gif">
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4216807-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</HTML>
