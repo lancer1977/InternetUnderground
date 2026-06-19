@@ -22,6 +22,19 @@ forward.
 - `ARCHIVE_INVENTORY.md`: human-readable inventory of preserved content
 - `BROKEN_LINKS.md`: current internal link and asset notes
 
+## Hosting
+
+The archive is set up to publish as a static site from the repository root.
+The expected public URL is:
+
+- `https://lancer1977.github.io/InternetUnderground/`
+
+Verification check:
+
+- Open the URL and confirm the landing page loads
+- Click through to `iu/` and confirm the archive entry point works
+- Check that relative assets resolve when served from GitHub Pages
+
 ## Direction
 
 The target is not a copy. It is a revamp.
