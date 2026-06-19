@@ -13,11 +13,14 @@ forward.
 - Preserve the original website in one place
 - Treat this repo as the canonical base version
 - Build a new version that stays rooted in the original, but is clearly reworked
+- Keep the archive separate from modern documentation and rewrite work
 
 ## Layout
 
 - `iu/`: the website as it originally existed
 - `README.md`: project framing and direction
+- `ARCHIVE_INVENTORY.md`: human-readable inventory of preserved content
+- `BROKEN_LINKS.md`: current internal link and asset notes
 
 ## Direction
 
@@ -25,3 +28,9 @@ The target is not a copy. It is a revamp.
 
 The goal is to keep the original spirit, then HAID-ify the experience into a
 new version that feels like a deliberate evolution from `v0`.
+
+## Preservation Rules
+
+- Keep original archive files intact unless there is a clear restoration reason
+- Treat new documentation and rewrite content as separate from the preserved site
+- Avoid rewriting original page copy without an explicit archival or restoration goal
