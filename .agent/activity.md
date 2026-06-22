@@ -218,3 +218,7 @@
 - Bulk-migrated the remaining iu/webguide/culture/*.htm pages from the legacy wg*.gif nav set to the derived HD nav assets.
 
 - Bulk-migrated iu/webguide/**/*.htm and .html from the legacy wg*.gif nav set to the derived HD nav assets.
+
+- Added a local Nginx static deploy for iu-hd.polyhydragames.com and verified it with docker compose plus curl against the vhost.
+
+- Added the R620 Traefik compose path and Cloudflare DNS notes for iu-hd.polyhydragames.com, plus operator README guidance for local versus R620 deploys.
