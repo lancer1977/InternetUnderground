@@ -28,6 +28,12 @@ curl -I --resolve iu-hd.polyhydragames.com:8088:127.0.0.1 http://iu-hd.polyhydra
 curl -I --resolve iu-hd.polyhydragames.com:8088:127.0.0.1 http://iu-hd.polyhydragames.com:8088/iu/
 ```
 
+Automated smoke test:
+
+```bash
+./scripts/validate-iu-hd.sh
+```
+
 ## Stop
 
 ```bash
