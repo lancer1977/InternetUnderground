@@ -1,20 +1,58 @@
 <HTML>
 <HEAD>
 <TITLE>online only</TITLE>
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
+<STYLE TYPE="text/css">
+body {
+  margin: 0;
+  background: #2e2f26;
+  color: #f3e8d8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a { color: #f2b94b; }
+a:visited { color: #cbb3c7; }
+
+.online-shell {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 18px 40px;
+}
+
+.online-panel {
+  background: rgba(0, 0, 0, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+.online-panel font,
+.online-panel td {
+  line-height: 1.65;
+}
+
+.online-panel font[size="7"] {
+  font-size: 3rem !important;
+  letter-spacing: 0.03em;
+}
+
+.online-panel font[size="4"] {
+  font-size: 1.4rem !important;
+}
+
+.online-panel font[size="2"] {
+  font-size: 1rem !important;
+}
+
+.online-panel hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+</STYLE>
 </HEAD>
 
-<BODY 
- BGCOLOR=404035 
- TEXT=D05000
- LINK=F0D000
- VLINK=999999
- ALINK=FF0000>
-
-
-
-
-
-<TABLE BORDER=0 CELLSPACING=0 BGCOLOR=000000>
+<BODY>
+<DIV CLASS="online-shell">
+<TABLE BORDER=0 CELLSPACING=0 WIDTH="100%" CLASS="online-panel">
 <TR>
 <TD WIDTH=15>&nbsp;</TD>
 
@@ -44,7 +82,7 @@ online only
 <P>
 <BR>
 <CENTER>
-<A HREF="imho/"><IMG BORDER=0 WIDTH=450 HEIGHT=75 SRC="imhoban.gif" ALT="IMHO"></A><BR>
+<A HREF="imho/"><IMG BORDER=0 WIDTH=450 HEIGHT=75 SRC="imho/imho-hd.png" ALT="IMHO"></A><BR>
 </CENTER>
 <P>
 <BR>
@@ -93,7 +131,7 @@ Past IMHOs:</B>
 <A HREF="/iu/contact/"><IMG BORDER=0 WIDTH=75 HEIGHT=100 SRC="/iu/navart/contact.gif" ALT="contact"></A>
 </NOBR>
 <BR>
-<A HREF="/iu/home.htm"><IMG BORDER=0 WIDTH=450 HEIGHT=25 SRC="/iu/navart/home.gif" ALT="home"></A>
+<A HREF="/iu/home.htm"><IMG BORDER=0 WIDTH=450 HEIGHT=25 SRC="/iu/navart/home-hd.png" ALT="home"></A>
 </CENTER>
 <P>
 &nbsp;
@@ -113,5 +151,6 @@ var pageTracker = _gat._getTracker("UA-4216807-3");
 pageTracker._initData();
 pageTracker._trackPageview();
 </script>
+</DIV>
 </body>
 </HTML>

@@ -28,6 +28,7 @@ The archive is set up to publish as a static site from the repository root.
 The expected public URL is:
 
 - `https://lancer1977.github.io/InternetUnderground/`
+- Custom domain: `https://internetunderground.polyhydragames.com/`
 
 Verification check:
 

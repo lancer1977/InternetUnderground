@@ -1,0 +1,9 @@
+Review the provided archive page or asset family for readability problems on modern monitors.
+
+Return:
+- the top readability issues
+- a minimal CSS/layout cleanup plan
+- any images that look like candidates for AI cleanup or upscaling
+- any risks to archive fidelity
+
+Keep the response conservative. Do not rewrite archive copy. Do not suggest replacing original assets in place.
