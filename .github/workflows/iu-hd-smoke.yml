@@ -1,0 +1,29 @@
+name: IU-HD smoke test
+
+on:
+  pull_request:
+    paths:
+      - "iu/**"
+      - "deploy/iu-hd/**"
+      - "scripts/validate-iu-hd.sh"
+      - ".github/workflows/iu-hd-smoke.yml"
+  push:
+    branches:
+      - haid-v1
+    paths:
+      - "iu/**"
+      - "deploy/iu-hd/**"
+      - "scripts/validate-iu-hd.sh"
+      - ".github/workflows/iu-hd-smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate site URLs
+        run: ./scripts/validate-iu-hd.sh
