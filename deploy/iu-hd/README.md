@@ -41,6 +41,10 @@ After operator approval, deploy with:
 ./scripts/deploy-iu-hd-r620.sh --apply
 ```
 
+The apply path syncs the current repo content into the R620 static tree before
+refreshing the Docker stack. It preserves `.env`, `deploy/iu-hd/.env`, `.git/`,
+and local `.devstudio/runtime/` state.
+
 ## Check
 
 ```bash

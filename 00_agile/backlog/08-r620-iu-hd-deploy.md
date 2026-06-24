@@ -1,6 +1,6 @@
 # Feature: r620-iu-hd-deploy
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: high
 **Complexity**: Medium
@@ -19,7 +19,7 @@ DNS record so it can be exercised from a stable public hostname.
 
 - [x] Define the R620 stack for the static site.
 - [x] Preserve the local deploy path for smoke tests.
-- [ ] Provision the public DNS record and live ingress for `iu-hd.polyhydragames.com`.
+- [x] Provision the public DNS record and live ingress for `iu-hd.polyhydragames.com`.
 
 ## Acceptance Criteria
 
@@ -28,4 +28,13 @@ DNS record so it can be exercised from a stable public hostname.
 
 ## Notes
 
-This slice tracks the remaining R620/cloud edge work after the local deploy. The live hostname is currently not resolving publicly, so the public DNS and ingress portion remains open.
+This slice tracked the R620/cloud edge work after the local deploy. The live
+hostname now resolves through Cloudflare to the R620 Traefik/Nginx stack.
+
+## Completion Notes
+
+- `iu-hd_web` is running on R620.
+- `https://iu-hd.polyhydragames.com/` and `/iu/` return 200.
+- The R620 static tree was resynced after stale content was found.
+- `scripts/deploy-iu-hd-r620.sh --apply` now syncs repo content before
+  refreshing the stack.

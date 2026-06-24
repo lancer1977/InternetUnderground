@@ -12,7 +12,8 @@ usage() {
 Usage:
   scripts/deploy-iu-hd-r620.sh [--apply]
 
-Defaults to read-only preflight. Use --apply to deploy the R620 Docker stack.
+Defaults to read-only preflight. Use --apply to sync the current repo content
+to the R620 static tree and deploy the Docker stack.
 
 Environment:
   IU_HD_R620_HOST   SSH target. Default: 192.168.0.21
@@ -78,6 +79,13 @@ To deploy after approval:
 EOF
   exit 0
 fi
+
+rsync -az --delete \
+  --exclude='.git/' \
+  --exclude='.devstudio/runtime/' \
+  --exclude='.env' \
+  --exclude='deploy/iu-hd/.env' \
+  ./ "${remote_host}:${remote_root}/"
 
 run_remote "set -eu
 cd '${remote_root}'

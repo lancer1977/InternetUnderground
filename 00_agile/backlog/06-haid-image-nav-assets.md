@@ -1,6 +1,6 @@
 # Feature: haid-image-nav-assets
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: high
 **Complexity**: Medium
@@ -16,9 +16,9 @@ The pages will still look soft if the key graphics remain low-resolution or heav
 
 ## Requirements
 
-- [ ] Identify the most visible graphics that need cleanup.
-- [ ] Produce derived image variants instead of overwriting originals.
-- [ ] Keep the original files available for rollback and comparison.
+- [x] Identify the most visible graphics that need cleanup.
+- [x] Produce derived image variants instead of overwriting originals.
+- [x] Keep the original files available for rollback and comparison.
 
 ## Acceptance Criteria
 
@@ -43,3 +43,10 @@ Use Qwen only to identify candidates and propose cleanup steps. Use an image too
 - `iu/webguide/wghome.gif`
 - `iu/webguide/wgsearch.gif`
 - `iu/webguide/wgback.gif`
+
+## Completion Notes
+
+- Derived `-hd` variants exist for the starter queue.
+- WebGuide pages reference `wgmap-hd.png`, `wghome-hd.png`,
+  `wgsearch-hd.png`, and `wgback-hd.png`.
+- Live IU-HD asset checks return 200 for the derived nav assets.

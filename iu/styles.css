@@ -4,6 +4,11 @@
 
 html {
 	background: #030403;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
 }
 
 body {
@@ -75,4 +80,39 @@ font[size="1"] {
 	font-size: 0.86rem;
 	letter-spacing: 0.01em;
 	line-height: 1.45;
+}
+
+@media (max-width: 720px) {
+	.iu-shell {
+		border-radius: 12px;
+		margin: 0;
+		padding: 28px 16px 40px;
+	}
+
+	.iu-shell table[align="left"],
+	.iu-shell table[align="right"] {
+		display: table;
+		float: none !important;
+		margin: 0 0 18px;
+	}
+
+	.iu-shell nobr {
+		white-space: normal;
+	}
+
+	.iu-shell > table:nth-of-type(2),
+	.iu-shell > table:nth-of-type(2) > tbody,
+	.iu-shell > table:nth-of-type(2) > tbody > tr,
+	.iu-shell > table:nth-of-type(2) > tbody > tr > td {
+		display: block;
+		width: auto !important;
+	}
+
+	.iu-shell > table:nth-of-type(2) > tbody > tr > td:first-child {
+		display: none;
+	}
+
+	.iu-lead {
+		max-width: none;
+	}
 }

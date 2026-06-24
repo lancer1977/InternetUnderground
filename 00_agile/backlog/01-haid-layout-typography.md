@@ -1,6 +1,6 @@
 # Feature: haid-layout-typography
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: high
 **Complexity**: Medium
@@ -16,10 +16,10 @@ The current site is too cramped and visually inconsistent on large displays. The
 
 ## Requirements
 
-- [ ] Establish a shared content width and spacing system.
-- [ ] Improve heading hierarchy and body text readability.
-- [ ] Tune contrast, backgrounds, and link presentation for modern screens.
-- [ ] Keep the archive content intact.
+- [x] Establish a shared content width and spacing system.
+- [x] Improve heading hierarchy and body text readability.
+- [x] Tune contrast, backgrounds, and link presentation for modern screens.
+- [x] Keep the archive content intact.
 
 ## Acceptance Criteria
 
@@ -33,3 +33,10 @@ none
 ## Notes
 
 This is the first implementation slice of issue #7.
+
+## Completion Notes
+
+- Landing pages are covered by #13.
+- Representative detail pages are covered by #14.
+- Shared nav/banner image clarity is covered by #15 and #16.
+- Live IU-HD verification confirms the updated styles and HD assets are served.

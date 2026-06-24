@@ -45,6 +45,15 @@ the preserved `iu/` snapshot.
   hosting remains a separate follow-up.
 - 2026-06-23: Added the first archive image cleanup pass for `iuo` and
   documented the original-vs-modern asset structure.
+- 2026-06-24: Corrected stale R620 static content so the live IU-HD endpoint
+  serves `iuo-hd.png` and the current `iu/styles.css` path.
+- 2026-06-24: Added the missing modern presentation shell to
+  `iu/current/index.html` and verified the landing-page set through the live
+  IU-HD endpoint.
+- 2026-06-24: Verified shared nav/banner HD variants are present, referenced,
+  and live for the WebGuide nav set, IMHO banner, and home navigation art.
+- 2026-06-24: Added a representative detail-page presentation layer for the
+  IMHO article family and rewired those pages to use `imho-hd.png`.
 
 ## Visual References
 

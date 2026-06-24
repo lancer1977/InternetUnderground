@@ -1,6 +1,6 @@
 # Feature: haid-landing-pages
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: high
 **Complexity**: Medium
@@ -16,9 +16,9 @@ The highest-traffic entry points should establish the new presentation layer and
 
 ## Requirements
 
-- [ ] Apply responsive width, spacing, and typography to the main landing pages.
-- [ ] Keep the content and link structure intact.
-- [ ] Preserve the archive's visual identity while reducing cramped layout behavior.
+- [x] Apply responsive width, spacing, and typography to the main landing pages.
+- [x] Keep the content and link structure intact.
+- [x] Preserve the archive's visual identity while reducing cramped layout behavior.
 
 ## Acceptance Criteria
 
@@ -32,3 +32,9 @@ The highest-traffic entry points should establish the new presentation layer and
 ## Notes
 
 Suggested target set: `index.html`, `iu/index.html`, `iu/current/index.html`, `iu/archive/index.html`, `iu/contest/index.html`, `iu/online/index.html`, `iu/webguide/index.html`, `iu/contact/index.html`.
+
+## Completion Notes
+
+- Added the missing modern shell for `iu/current/index.html`.
+- Verified the full landing-page set through the live IU-HD endpoint.
+- Preserved the compact archival feel on `iu/index.html` while fixing the stale HD asset/style path.

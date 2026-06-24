@@ -33,7 +33,7 @@ jobs:
           set -euo pipefail
           rm -rf .pages-site
           mkdir -p .pages-site
-          cp index.html u-o.gif .nojekyll .pages-site/
+          cp index.html u-o.gif .nojekyll CNAME .pages-site/
           cp -R iu .pages-site/
 
       - name: Upload artifact

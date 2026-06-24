@@ -1,6 +1,6 @@
 # Feature: haid-shared-banner-art
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: high
 **Complexity**: Medium
@@ -16,9 +16,9 @@ The page typography is improving, but the site still looks soft if the banner gr
 
 ## Requirements
 
-- [ ] Identify one or more visible banner assets for cleanup.
-- [ ] Produce derived HD variants instead of overwriting originals.
-- [ ] Keep a reversible path back to the source files.
+- [x] Identify one or more visible banner assets for cleanup.
+- [x] Produce derived HD variants instead of overwriting originals.
+- [x] Keep a reversible path back to the source files.
 
 ## Acceptance Criteria
 
@@ -33,3 +33,10 @@ The page typography is improving, but the site still looks soft if the banner gr
 ## Notes
 
 Suggested starting assets: `iu/online/imho/imho.gif`, `iu/webguide/wgmap.gif`, and `iu/navart/home.gif`.
+
+## Completion Notes
+
+- Derived variants exist for `imho.gif`, `wgmap.gif`, and `home.gif`.
+- `iu/online/index.html` references `imho/imho-hd.png`.
+- WebGuide pages reference `wgmap-hd.png`.
+- Live IU-HD asset checks return 200 for the derived banner assets.
