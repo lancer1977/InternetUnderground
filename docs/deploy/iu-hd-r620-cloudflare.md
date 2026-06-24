@@ -28,11 +28,16 @@ cd /home/lancer1977/servers/internetunderground
 docker-compose -f deploy/iu-hd/r620-compose.yml config
 ```
 
+Repo-local guarded preflight:
+
+```bash
+./scripts/deploy-iu-hd-r620.sh
+```
+
 Deployment command, after operator approval:
 
 ```bash
-cd /home/lancer1977/servers/internetunderground
-docker stack deploy -c deploy/iu-hd/r620-compose.yml iu-hd
+./scripts/deploy-iu-hd-r620.sh --apply
 ```
 
 ## Cloudflare DNS

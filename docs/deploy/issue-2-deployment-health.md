@@ -84,6 +84,8 @@ Read-only R620 findings:
 - No `iu-hd` stack/service/container is currently deployed.
 - `docker-compose -f deploy/iu-hd/r620-compose.yml config` renders cleanly on
   R620; `docker compose` v2 is not installed there.
+- `./scripts/deploy-iu-hd-r620.sh` runs the R620 preflight without mutating the
+  host; `--apply` is required for deployment.
 
 Verification after the fix:
 

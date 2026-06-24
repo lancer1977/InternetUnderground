@@ -29,6 +29,18 @@ the `docker compose` v2 plugin. Use this read-only check before deploying:
 docker-compose -f deploy/iu-hd/r620-compose.yml config
 ```
 
+From this repo, use the guarded helper for a read-only R620 preflight:
+
+```bash
+./scripts/deploy-iu-hd-r620.sh
+```
+
+After operator approval, deploy with:
+
+```bash
+./scripts/deploy-iu-hd-r620.sh --apply
+```
+
 ## Check
 
 ```bash

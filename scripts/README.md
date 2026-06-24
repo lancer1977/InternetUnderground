@@ -8,6 +8,8 @@ This folder contains repo-local validation and generation helpers.
   contract.
 - `validate-iu-hd.sh`: starts the local IU-HD Nginx deployment and verifies
   `/` plus `/iu/` for the configured host names.
+- `deploy-iu-hd-r620.sh`: runs an R620 preflight by default and deploys the
+  IU-HD Docker stack only when called with `--apply`.
 
 ## Archive Checks
 
