@@ -7,6 +7,7 @@ import argparse
 from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 from urllib.parse import unquote, urlsplit
 
 
@@ -23,6 +24,8 @@ LOCAL_ATTRS = {
     "td": "background",
     "table": "background",
 }
+
+HEX_COLOR = re.compile(r"#?[0-9a-fA-F]{6}")
 
 
 @dataclass(frozen=True)
@@ -48,6 +51,8 @@ class LinkParser(HTMLParser):
         attr_map = {key.lower(): value for key, value in attrs if value is not None}
         raw_ref = (attr_map.get(attr_name) or "").strip()
         if not raw_ref or raw_ref.startswith(("#", "javascript:", "mailto:", "tel:")):
+            return
+        if attr_name == "background" and HEX_COLOR.fullmatch(raw_ref):
             return
 
         parsed = urlsplit(raw_ref)

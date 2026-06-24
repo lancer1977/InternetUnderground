@@ -35,11 +35,34 @@ restorable local references:
 - preserved online-feature and WebGuide back-navigation links now point at
   existing local index pages
 
-After that pass, the scanner reports:
+After that pass, the scanner reported:
 
 - `checked_references=27827`
 - `missing_references=42`
 - `unique_missing_references=41`
+
+The source-recovery pass used `http://underground-online.troybrophy.com/` as
+the authoritative public mirror for exact original paths. It restored:
+
+- `iu/archive/issue16/faq16/index.html`
+- `iu/archive/issue16/onwith16/index.html`
+- `iu/archive/issue16/schlock/index.html`
+- `iu/archive/issue9/presses/index.html`
+- `iu/online/reviews/games/diablo/dsc1.gif`
+- `iu/online/reviews/games/diablo/dsc2.gif`
+- `iu/online/reviews/games/drowngod/crowley.gif`
+- `iu/online/reviews/games/drowngod/greyhack.gif`
+- `iu/online/reviews/games/drowngod/readme.txt`
+- `iu/online/reviews/games/redalert/game04.gif`
+
+The checker was also tightened so six-digit `BACKGROUND=000000` color values
+are not treated as local file references.
+
+After that pass, the scanner reports:
+
+- `checked_references=27855`
+- `missing_references=31`
+- `unique_missing_references=30`
 
 Remaining missing targets are grouped below.
 
@@ -49,37 +72,57 @@ Remaining missing targets are grouped below.
   `/iu/online/unamail/`
 - `iu/archive/issue7/deadman/index.html` references missing
   `/iu/online/dmcall/`
-- `iu/archive/issue16/index.html` references missing issue section paths:
-  `faq16`, `onwith16`, and `schlock`
-- `iu/archive/issue9/index.html` references missing `presses`
 
-These directories either are not present or contain only artwork without a
-preserved article `index.html`/`index.htm`.
+These paths returned 404 from the Troy Brophy mirror and from alternate
+`/origin/` and non-`/iu/` path probes during the 2026-06-24 recovery pass.
 
 ### Missing Historical Assets and Downloads
 
 - `iu/archive/issue1/onwith1/index.html` references missing
   `art/onwithr.gif`
-- `iu/online/reviews/games/diablo/index.html` references missing `dsc1.gif`
-  and `dsc2.gif`
 - `iu/online/reviews/games/drowngod/index.html` references missing
-  `DgPatch5.exe`, `crowley.gif`, `greyhack.gif`, and `readme.txt`
-- `iu/online/reviews/games/redalert/index.html` references missing
-  `game04.gif`
+  `DgPatch5.exe`
+
+These paths returned 404 from the Troy Brophy mirror during the 2026-06-24
+recovery pass. The page-local screenshots and text files available from the
+mirror were restored.
 
 ### Missing WebGuide Detail Pages
 
 Several WebGuide index pages reference historical review/detail pages that are
 not present in the archive snapshot, including entries under:
 
-- `iu/webguide/entertain/`
-- `iu/webguide/read/`
-- `iu/webguide/rec/`
-- `iu/webguide/tech/`
-- `iu/webguide/tunes/`
+- `iu/webguide/entertain/e_afh.htm`
+- `iu/webguide/entertain/e_cmsa.htm`
+- `iu/webguide/entertain/e_dtgsa.htm`
+- `iu/webguide/entertain/e_mlinkskey.htm`
+- `iu/webguide/entertain/e_ntsgr.htm`
+- `iu/webguide/read/r_ba.htm`
+- `iu/webguide/read/r_cv.htm`
+- `iu/webguide/rec/rc_bandjhm.htm`
+- `iu/webguide/rec/rc_darinha.htm`
+- `iu/webguide/rec/rc_elecpost.htm`
+- `iu/webguide/rec/rc_fruitgame.htm`
+- `iu/webguide/rec/rc_hoslime.htm`
+- `iu/webguide/rec/rc_httiyhab.htm`
+- `iu/webguide/rec/rc_mtbrev.htm`
+- `iu/webguide/rec/rc_ttaogtue.htm`
+- `iu/webguide/tech/tc_anawbap.htm`
+- `iu/webguide/tech/tc_chotn.htm`
+- `iu/webguide/tech/tc_emblaze.htm`
+- `iu/webguide/tech/tc_fos.htm`
+- `iu/webguide/tech/tc_gmsc.htm`
+- `iu/webguide/tech/tc_jbcp.htm`
+- `iu/webguide/tech/tc_ttwttyh.htm`
+- `iu/webguide/tunes/tune_.bhphtm`
+- `iu/webguide/tunes/tune_sohp.htm`
+- `iu/webguide/tunes/tune_ulhp.htm`
+- `iu/webguide/tunes/tunerocktrop.htm`
 
 The missing WebGuide targets are title-list entries whose corresponding
-detail-page files are absent from this repository snapshot.
+detail-page files are absent from this repository snapshot. Representative
+missing paths also returned 404 from the Troy Brophy mirror both with and
+without the `/iu/` prefix.
 
 The entry-point smoke path still passes locally for `/` and `/iu/`; this list is
 for deeper archive restoration follow-up.
