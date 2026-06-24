@@ -18,7 +18,15 @@ docker compose -f deploy/iu-hd/docker-compose.local.yml up -d
 For the R620 host, use the Traefik-facing compose file instead:
 
 ```bash
-docker compose -f deploy/iu-hd/r620-compose.yml up -d
+cd /home/lancer1977/servers/internetunderground
+docker stack deploy -c deploy/iu-hd/r620-compose.yml iu-hd
+```
+
+R620 currently has `docker-compose` v1 available for config rendering, but not
+the `docker compose` v2 plugin. Use this read-only check before deploying:
+
+```bash
+docker-compose -f deploy/iu-hd/r620-compose.yml config
 ```
 
 ## Check
@@ -49,5 +57,5 @@ docker compose -f deploy/iu-hd/docker-compose.local.yml down
 R620 stop:
 
 ```bash
-docker compose -f deploy/iu-hd/r620-compose.yml down
+docker stack rm iu-hd
 ```

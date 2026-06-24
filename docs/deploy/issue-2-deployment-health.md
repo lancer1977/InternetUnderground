@@ -75,6 +75,16 @@ Fix requirements:
   static site root.
 - Validate Traefik TLS routing to the Nginx container.
 
+Read-only R620 findings:
+
+- R620 is reachable at `192.168.0.21` as `dell-r620-1`.
+- `/home/lancer1977/servers/internetunderground` exists and contains the static
+  archive entry files.
+- The `traefik-public` overlay network exists.
+- No `iu-hd` stack/service/container is currently deployed.
+- `docker-compose -f deploy/iu-hd/r620-compose.yml config` renders cleanly on
+  R620; `docker compose` v2 is not installed there.
+
 Verification after the fix:
 
 ```bash

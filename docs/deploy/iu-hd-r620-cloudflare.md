@@ -10,6 +10,31 @@ This document captures the deploy shape for `iu-hd.polyhydragames.com`.
 - Deploy the stack into the existing `traefik-public` network on the R620 host.
 - Traefik should route `Host(\`iu-hd.polyhydragames.com\`)` to the Nginx container.
 
+Read-only R620 findings from 2026-06-24:
+
+- R620 is reachable at `192.168.0.21` as `dell-r620-1`.
+- `/home/lancer1977/servers/internetunderground` exists and contains
+  `index.html`, `u-o.gif`, and `iu/index.html`.
+- The `traefik-public` overlay network exists.
+- No `iu-hd` or `internetunderground` Docker stack/service/container is
+  currently deployed.
+- R620 has `docker-compose` v1 for `config` checks, but not the `docker compose`
+  v2 plugin.
+
+Read-only config check:
+
+```bash
+cd /home/lancer1977/servers/internetunderground
+docker-compose -f deploy/iu-hd/r620-compose.yml config
+```
+
+Deployment command, after operator approval:
+
+```bash
+cd /home/lancer1977/servers/internetunderground
+docker stack deploy -c deploy/iu-hd/r620-compose.yml iu-hd
+```
+
 ## Cloudflare DNS
 
 Create one DNS record in the `polyhydragames.com` zone:
@@ -22,6 +47,13 @@ Create one DNS record in the `polyhydragames.com` zone:
 If `r620.polyhydragames.com` is not the public ingress name for the host,
 point the CNAME at the real public ingress hostname or use an `A` record for the
 public IP instead.
+
+Current DNS findings from 2026-06-24:
+
+- `r620.polyhydragames.com` does not resolve from this machine.
+- `iu-hd.polyhydragames.com` resolves through Cloudflare but returns a GitHub
+  Pages-style `HTTP/2 404`, so it is not currently reaching the intended R620
+  Traefik service.
 
 ## Smoke check
 
