@@ -10,6 +10,9 @@ This folder contains repo-local validation and generation helpers.
   `/` plus `/iu/` for the configured host names.
 - `deploy-iu-hd-r620.sh`: runs an R620 preflight by default and deploys the
   IU-HD Docker stack only when called with `--apply`.
+- `plan-cloudflare-dns.sh`: inventories and plans the Cloudflare DNS changes
+  for the IU-HD and custom archive hostnames. It only mutates DNS with
+  `--apply` plus `CONFIRM_CLOUDFLARE_DNS_APPLY=yes`.
 
 ## Archive Checks
 

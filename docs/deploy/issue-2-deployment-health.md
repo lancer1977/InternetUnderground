@@ -61,6 +61,18 @@ Fix requirements:
   publishing `CNAME` in the Pages artifact.
 - Re-run the Pages deployment after the environment branch policy is corrected.
 
+Repo-local guarded DNS plan:
+
+```bash
+./scripts/plan-cloudflare-dns.sh --target archive
+```
+
+After operator approval, apply the DNS record with:
+
+```bash
+CONFIRM_CLOUDFLARE_DNS_APPLY=yes ./scripts/plan-cloudflare-dns.sh --target archive --apply
+```
+
 Verification after the fix:
 
 ```bash
@@ -104,6 +116,9 @@ Read-only R620 findings:
   R620; `docker compose` v2 is not installed there.
 - `./scripts/deploy-iu-hd-r620.sh` runs the R620 preflight without mutating the
   host; `--apply` is required for deployment.
+- `./scripts/plan-cloudflare-dns.sh --target iu-hd` shows the DNS change needed
+  to point the public hostname at R620; `--apply` plus
+  `CONFIRM_CLOUDFLARE_DNS_APPLY=yes` is required for DNS mutation.
 
 Verification after the fix:
 

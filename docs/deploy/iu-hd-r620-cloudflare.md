@@ -76,6 +76,18 @@ Current likely public DNS correction after the R620 stack is deployed:
 - Target: `131.241.115.72`
 - Proxy: enabled, matching the existing homelab records
 
+Repo-local guarded DNS plan:
+
+```bash
+./scripts/plan-cloudflare-dns.sh --target iu-hd
+```
+
+After operator approval, apply the DNS change with:
+
+```bash
+CONFIRM_CLOUDFLARE_DNS_APPLY=yes ./scripts/plan-cloudflare-dns.sh --target iu-hd --apply
+```
+
 ## Smoke check
 
 After the DNS record exists and the R620 stack is live:
