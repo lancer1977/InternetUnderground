@@ -1,6 +1,6 @@
 # Feature: haid-asset-structure
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: medium
 **Complexity**: Small
@@ -16,10 +16,10 @@ The site needs a durable way to separate preserved archive files from modernized
 
 ## Requirements
 
-- [ ] Document where original assets live.
-- [ ] Document where transformed CSS and image variants live.
-- [ ] Make authoritative files easy to identify.
-- [ ] Keep rollback paths obvious.
+- [x] Document where original assets live.
+- [x] Document where transformed CSS and image variants live.
+- [x] Make authoritative files easy to identify.
+- [x] Keep rollback paths obvious.
 
 ## Acceptance Criteria
 

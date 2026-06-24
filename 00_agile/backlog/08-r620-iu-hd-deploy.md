@@ -17,9 +17,9 @@ DNS record so it can be exercised from a stable public hostname.
 
 ## Requirements
 
-- [ ] Define the R620 stack for the static site.
-- [ ] Document the Cloudflare DNS record for `iu-hd.polyhydragames.com`.
-- [ ] Preserve the local deploy path for smoke tests.
+- [x] Define the R620 stack for the static site.
+- [x] Preserve the local deploy path for smoke tests.
+- [ ] Provision the public DNS record and live ingress for `iu-hd.polyhydragames.com`.
 
 ## Acceptance Criteria
 
@@ -28,4 +28,4 @@ DNS record so it can be exercised from a stable public hostname.
 
 ## Notes
 
-This slice tracks the remaining R620/cloud edge work after the local deploy.
+This slice tracks the remaining R620/cloud edge work after the local deploy. The live hostname is currently not resolving publicly, so the public DNS and ingress portion remains open.

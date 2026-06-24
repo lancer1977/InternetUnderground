@@ -34,6 +34,12 @@ Automated smoke test:
 ./scripts/validate-iu-hd.sh
 ```
 
+Deployment target contract test:
+
+```bash
+./scripts/test-iu-hd-deploy.sh
+```
+
 ## Stop
 
 ```bash

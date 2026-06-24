@@ -1,6 +1,6 @@
 # Feature: haid-image-cleanup
 
-**Status**: backlog
+**Status**: done
 **Owner**: unassigned
 **Priority**: high
 **Complexity**: Medium
@@ -16,10 +16,10 @@ Some legacy graphics need upscaling or cleanup to look acceptable on modern disp
 
 ## Requirements
 
-- [ ] Identify a safe sample set of images to improve.
-- [ ] Define an AI-assisted cleanup workflow.
-- [ ] Preserve originals alongside derived variants.
-- [ ] Use clear naming so transformed assets are obvious.
+- [x] Identify a safe sample set of images to improve.
+- [x] Define an AI-assisted cleanup workflow.
+- [x] Preserve originals alongside derived variants.
+- [x] Use clear naming so transformed assets are obvious.
 
 ## Acceptance Criteria
 
