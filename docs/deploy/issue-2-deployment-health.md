@@ -7,39 +7,26 @@ static archive hosting."
 
 | Requirement | Current status | Evidence |
 | --- | --- | --- |
-| Decide intended hosting target | Partially decided | GitHub Pages is the primary static archive target; IU-HD is a separate R620/Cloudflare lane tracked by issue #10. |
-| Verify `index.html` entry point | Locally healthy | `./scripts/validate-iu-hd.sh` returns `200 OK` for `/` through the local Nginx deployment. |
-| Confirm `/iu/` archive entry point | Locally healthy | `./scripts/validate-iu-hd.sh` returns `200 OK` for `/iu/` through the local Nginx deployment. |
+| Decide intended hosting target | Complete | GitHub Pages is the primary static archive target; IU-HD is a separate R620/Cloudflare lane tracked by issue #10. |
+| Verify `index.html` entry point | Live and locally healthy | `https://lancer1977.github.io/InternetUnderground/` returns `HTTP/2 200`; `./scripts/validate-iu-hd.sh` returns `200 OK` for `/` through the local Nginx deployment. |
+| Confirm `/iu/` archive entry point | Live and locally healthy | `https://lancer1977.github.io/InternetUnderground/iu/` returns `HTTP/2 200`; `./scripts/validate-iu-hd.sh` returns `200 OK` for `/iu/` through the local Nginx deployment. |
 | Confirm relative links and assets | Not complete | `python3 scripts/check-archive-links.py --limit 50` finds deeper archive misses; see `BROKEN_LINKS.md` and issue #11. |
-| Add deployment notes to README | Present, needs live caveat | `README.md` lists intended public URLs and verification commands. |
-| Document public archive URL once live | Not complete | GitHub Pages and custom-domain URLs are not currently serving the archive. |
+| Add deployment notes to README | Complete | `README.md` lists the live GitHub Pages URL, planned custom domain, IU-HD endpoint, and verification commands. |
+| Document public archive URL once live | Complete for the primary URL | GitHub Pages is live at `https://lancer1977.github.io/InternetUnderground/`; the custom archive domain remains pending DNS/Pages configuration. |
 
 ## Current Blockers
 
 ### GitHub Pages
 
-The repository has a Pages workflow at `.github/workflows/pages.yml`, but live
-GitHub Actions runs on `haid-v1` are rejected before a runner starts.
+GitHub Pages is healthy for the primary archive URL.
 
-Evidence from the latest failed Pages run:
+Evidence from the successful Pages run:
 
 - Workflow: `Deploy archive to GitHub Pages`
-- Branch: `haid-v1`
-- Failure annotation: `Branch "haid-v1" is not allowed to deploy to github-pages due to environment protection rules.`
-- Environment branch policy currently allows only `master`.
-
-Fix options:
-
-- Merge/promote the Pages workflow and archive bundle changes to `master`,
-  keeping the existing environment policy.
-- Or allow `haid-v1` to deploy to the `github-pages` environment, then re-run
-  the Pages workflow.
-
-The repo workflow now targets `master`, matching the current GitHub Pages
-environment branch policy. The remaining step is to promote the current
-deployment files to `master` or change the environment policy intentionally.
-
-Verification after the fix:
+- Branch: `master`
+- Run: `28078178443`
+- Commit: `759ce6c577c9bd48f9e1796e06711d5be5aeb3dd`
+- Result: success
 
 ```bash
 gh run list --workflow pages.yml --limit 5
@@ -105,6 +92,9 @@ gh issue view 10 --json number,title,state,body,comments,url,labels
 ./scripts/test-iu-hd-deploy.sh
 ./scripts/validate-iu-hd.sh
 python3 scripts/check-archive-links.py --limit 50
+gh run watch 28078178443 --exit-status
+curl -L -I --max-time 20 https://lancer1977.github.io/InternetUnderground/
+curl -L -I --max-time 20 https://lancer1977.github.io/InternetUnderground/iu/
 gh run list --limit 10 --json databaseId,workflowName,headBranch,status,conclusion,createdAt,updatedAt,url
 gh api repos/lancer1977/InternetUnderground/pages
 gh api repos/lancer1977/InternetUnderground/environments/github-pages/deployment-branch-policies

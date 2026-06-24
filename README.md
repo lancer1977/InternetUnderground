@@ -24,19 +24,28 @@ forward.
 
 ## Hosting
 
-The archive is intended to publish as a static site from the repository root.
-Track the current deployment health in
-`docs/deploy/issue-2-deployment-health.md` before treating a URL as live.
+The archive publishes as a static site from the repository root.
 
-Expected public URLs:
+Live public URL:
 
 - `https://lancer1977.github.io/InternetUnderground/`
-- Custom domain: `https://internetunderground.polyhydragames.com/`
+
+Planned custom archive domain:
+
+- `https://internetunderground.polyhydragames.com/`
+
+Related IU-HD R620/Cloudflare endpoint:
+
+- `https://iu-hd.polyhydragames.com/`
+
+Track deployment-path health in `docs/deploy/issue-2-deployment-health.md`.
 
 Verification check:
 
-- Open the URL and confirm the landing page loads
-- Click through to `iu/` and confirm the archive entry point works
+- Open `https://lancer1977.github.io/InternetUnderground/` and confirm the
+  landing page loads
+- Open `https://lancer1977.github.io/InternetUnderground/iu/` and confirm the
+  archive entry point works
 - Check that relative assets resolve when served from GitHub Pages
 - Run `./scripts/test-iu-hd-deploy.sh` for the IU-HD deploy contract
 - Run `./scripts/validate-iu-hd.sh` for the local Nginx smoke path
