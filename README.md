@@ -34,6 +34,9 @@ Planned custom archive domain:
 
 - `https://internetunderground.polyhydragames.com/`
 
+This hostname is not live yet; track it separately from the working GitHub Pages
+URL so the current archive URL does not regress.
+
 Related IU-HD R620/Cloudflare endpoint:
 
 - `https://iu-hd.polyhydragames.com/`

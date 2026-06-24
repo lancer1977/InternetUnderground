@@ -12,7 +12,7 @@ static archive hosting."
 | Confirm `/iu/` archive entry point | Live and locally healthy | `https://lancer1977.github.io/InternetUnderground/iu/` returns `HTTP/2 200`; `./scripts/validate-iu-hd.sh` returns `200 OK` for `/iu/` through the local Nginx deployment. |
 | Confirm relative links and assets | Not complete | `python3 scripts/check-archive-links.py --limit 50` finds deeper archive misses; see `BROKEN_LINKS.md` and issue #11. |
 | Add deployment notes to README | Complete | `README.md` lists the live GitHub Pages URL, planned custom domain, IU-HD endpoint, and verification commands. |
-| Document public archive URL once live | Complete for the primary URL | GitHub Pages is live at `https://lancer1977.github.io/InternetUnderground/`; the custom archive domain remains pending DNS/Pages configuration. |
+| Document public archive URL once live | Complete for the primary URL | GitHub Pages is live at `https://lancer1977.github.io/InternetUnderground/`; the custom archive domain remains pending DNS/Pages configuration in issue #12. |
 
 ## Current Blockers
 
@@ -39,6 +39,19 @@ curl -I https://lancer1977.github.io/InternetUnderground/iu/
 `internetunderground.polyhydragames.com` does not currently resolve from this
 machine. The repository has a `CNAME` file, but the current Pages artifact
 workflow does not publish it and GitHub Pages reports `cname: null`.
+Track this path in GitHub issue #12.
+
+Read-only Cloudflare DNS inventory from 2026-06-24:
+
+- `internetunderground.polyhydragames.com`: no DNS record found.
+- `iu.polyhydragames.com`: proxied CNAME to `internetunderground.pages.dev`.
+- Existing homelab records such as `radio.polyhydragames.com`,
+  `dreadtv.polyhydragames.com`, and `identity.polyhydragames.com` use proxied
+  `A` records to `131.241.115.72`.
+
+Do not publish the `CNAME` file in the Pages artifact until DNS and Pages
+custom-domain binding are intentionally configured. Publishing it too early can
+risk redirecting the working `github.io` URL to a hostname that does not resolve.
 
 Fix requirements:
 
@@ -67,6 +80,11 @@ Current public probe result on 2026-06-24:
 - `https://iu-hd.polyhydragames.com/` resolves through Cloudflare but returns
   `HTTP/2 404` with GitHub Pages-style headers.
 - `https://iu-hd.polyhydragames.com/iu/` returns the same `HTTP/2 404`.
+- Cloudflare DNS has a proxied CNAME from `iu-hd.polyhydragames.com` to
+  `lancer1977.github.io`, which explains the GitHub Pages-style 404.
+- Direct-origin probe against `131.241.115.72` returns Traefik's plain 404 for
+  `iu-hd.polyhydragames.com`, confirming public ingress is reachable but no
+  matching Traefik router is deployed yet.
 
 Fix requirements:
 
@@ -107,6 +125,7 @@ python3 scripts/check-archive-links.py --limit 50
 gh run watch 28078178443 --exit-status
 curl -L -I --max-time 20 https://lancer1977.github.io/InternetUnderground/
 curl -L -I --max-time 20 https://lancer1977.github.io/InternetUnderground/iu/
+curl -k -I --max-time 15 --resolve iu-hd.polyhydragames.com:443:131.241.115.72 https://iu-hd.polyhydragames.com/
 gh run list --limit 10 --json databaseId,workflowName,headBranch,status,conclusion,createdAt,updatedAt,url
 gh api repos/lancer1977/InternetUnderground/pages
 gh api repos/lancer1977/InternetUnderground/environments/github-pages/deployment-branch-policies

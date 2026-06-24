@@ -56,9 +56,25 @@ public IP instead.
 Current DNS findings from 2026-06-24:
 
 - `r620.polyhydragames.com` does not resolve from this machine.
-- `iu-hd.polyhydragames.com` resolves through Cloudflare but returns a GitHub
-  Pages-style `HTTP/2 404`, so it is not currently reaching the intended R620
-  Traefik service.
+- `iu-hd.polyhydragames.com` is currently a proxied Cloudflare CNAME to
+  `lancer1977.github.io`.
+- `iu-hd.polyhydragames.com` returns a GitHub Pages-style `HTTP/2 404`, so it
+  is not currently reaching the intended R620 Traefik service through public
+  DNS.
+- Existing homelab `polyhydragames.com` records such as
+  `radio.polyhydragames.com`, `dreadtv.polyhydragames.com`, and
+  `identity.polyhydragames.com` use proxied `A` records to `131.241.115.72`.
+- A direct-origin probe with
+  `--resolve iu-hd.polyhydragames.com:443:131.241.115.72` reaches Traefik but
+  returns a plain `HTTP/2 404`, which is expected until the `iu-hd` stack is
+  deployed and Traefik has a matching router.
+
+Current likely public DNS correction after the R620 stack is deployed:
+
+- Type: `A`
+- Name: `iu-hd`
+- Target: `131.241.115.72`
+- Proxy: enabled, matching the existing homelab records
 
 ## Smoke check
 
