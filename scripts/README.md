@@ -1,22 +1,21 @@
-# Script Template: .NET Coverage
+# Scripts
 
-This folder captures a reusable shell-script baseline for .NET coverage workflows.
+This folder contains repo-local validation and generation helpers.
 
-Copy the script into a product repo when you want a simple local command that:
+## Deployment Checks
 
-- runs the target test project or solution
-- collects `XPlat Code Coverage`
-- writes artifacts to a predictable `TestResults/` location
-- optionally generates a human-readable HTML report when ReportGenerator is available
+- `test-iu-hd-deploy.sh`: validates the IU-HD compose and Nginx deployment
+  contract.
+- `validate-iu-hd.sh`: starts the local IU-HD Nginx deployment and verifies
+  `/` plus `/iu/` for the configured host names.
 
-## Expected inputs
+## Archive Checks
 
-- `COVERAGE_TARGET` or the first positional argument: the solution or test project path
-- `CONFIGURATION` (optional): defaults to `Release`
-- `COVERAGE_RESULTS_DIR` (optional): defaults to `./TestResults/coverage`
+- `check-archive-links.py`: scans preserved HTML files for missing local links
+  and assets. It exits nonzero while missing local targets remain.
 
-## Notes
+Example:
 
-- The script is intentionally lightweight so repos can copy it and adapt the target path.
-- If ReportGenerator is installed, the script will emit an HTML summary under the report directory.
-- Repos with more advanced needs can wrap this command in CI or a repo-local task file.
+```bash
+python3 scripts/check-archive-links.py --limit 25
+```

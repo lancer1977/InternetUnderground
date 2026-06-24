@@ -3,7 +3,7 @@ name: Deploy archive to GitHub Pages
 on:
   push:
     branches:
-      - haid-v1
+      - master
   workflow_dispatch:
 
 permissions:
