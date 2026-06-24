@@ -2,6 +2,16 @@
 
 This document captures the deploy shape for `iu-hd.polyhydragames.com`.
 
+## Current status
+
+Live as of 2026-06-24:
+
+- `iu-hd_web` is deployed on R620 with one running replica.
+- Cloudflare DNS has `iu-hd.polyhydragames.com` as a proxied `A` record to
+  `131.241.115.72`.
+- `https://iu-hd.polyhydragames.com/` returns `HTTP/2 200`.
+- `https://iu-hd.polyhydragames.com/iu/` returns `HTTP/2 200`.
+
 ## R620 deploy
 
 - Use `deploy/iu-hd/r620-compose.yml`.
@@ -10,14 +20,13 @@ This document captures the deploy shape for `iu-hd.polyhydragames.com`.
 - Deploy the stack into the existing `traefik-public` network on the R620 host.
 - Traefik should route `Host(\`iu-hd.polyhydragames.com\`)` to the Nginx container.
 
-Read-only R620 findings from 2026-06-24:
+R620 findings from 2026-06-24:
 
 - R620 is reachable at `192.168.0.21` as `dell-r620-1`.
 - `/home/lancer1977/servers/internetunderground` exists and contains
   `index.html`, `u-o.gif`, and `iu/index.html`.
 - The `traefik-public` overlay network exists.
-- No `iu-hd` or `internetunderground` Docker stack/service/container is
-  currently deployed.
+- `iu-hd_web` is deployed and attached to `traefik-public`.
 - R620 has `docker-compose` v1 for `config` checks, but not the `docker compose`
   v2 plugin.
 
@@ -53,14 +62,11 @@ If `r620.polyhydragames.com` is not the public ingress name for the host,
 point the CNAME at the real public ingress hostname or use an `A` record for the
 public IP instead.
 
-Current DNS findings from 2026-06-24:
+DNS findings from 2026-06-24:
 
 - `r620.polyhydragames.com` does not resolve from this machine.
-- `iu-hd.polyhydragames.com` is currently a proxied Cloudflare CNAME to
-  `lancer1977.github.io`.
-- `iu-hd.polyhydragames.com` returns a GitHub Pages-style `HTTP/2 404`, so it
-  is not currently reaching the intended R620 Traefik service through public
-  DNS.
+- `iu-hd.polyhydragames.com` is a proxied Cloudflare `A` record to
+  `131.241.115.72`.
 - Existing homelab `polyhydragames.com` records such as
   `radio.polyhydragames.com`, `dreadtv.polyhydragames.com`, and
   `identity.polyhydragames.com` use proxied `A` records to `131.241.115.72`.
@@ -69,7 +75,7 @@ Current DNS findings from 2026-06-24:
   returns a plain `HTTP/2 404`, which is expected until the `iu-hd` stack is
   deployed and Traefik has a matching router.
 
-Current likely public DNS correction after the R620 stack is deployed:
+Public DNS contract:
 
 - Type: `A`
 - Name: `iu-hd`

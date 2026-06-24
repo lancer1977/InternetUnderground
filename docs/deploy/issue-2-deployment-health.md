@@ -7,7 +7,7 @@ static archive hosting."
 
 | Requirement | Current status | Evidence |
 | --- | --- | --- |
-| Decide intended hosting target | Complete | GitHub Pages is the primary static archive target; IU-HD is a separate R620/Cloudflare lane tracked by issue #10. |
+| Decide intended hosting target | Complete | GitHub Pages is the primary static archive target; IU-HD is a separate R620/Cloudflare lane now live and tracked by issue #10. |
 | Verify `index.html` entry point | Live and locally healthy | `https://lancer1977.github.io/InternetUnderground/` returns `HTTP/2 200`; `./scripts/validate-iu-hd.sh` returns `200 OK` for `/` through the local Nginx deployment. |
 | Confirm `/iu/` archive entry point | Live and locally healthy | `https://lancer1977.github.io/InternetUnderground/iu/` returns `HTTP/2 200`; `./scripts/validate-iu-hd.sh` returns `200 OK` for `/iu/` through the local Nginx deployment. |
 | Confirm relative links and assets | Not complete | `python3 scripts/check-archive-links.py --limit 50` finds deeper archive misses; see `BROKEN_LINKS.md` and issue #11. |
@@ -84,34 +84,24 @@ curl -I https://internetunderground.polyhydragames.com/iu/
 
 ### IU-HD R620/Cloudflare Lane
 
-The repo-local IU-HD contract and local Nginx smoke checks pass. The public
-hostname is not proven healthy and is tracked separately by issue #10.
+The repo-local IU-HD contract, R620 stack, Traefik route, and public hostname
+are healthy. This path is tracked by issue #10.
 
 Current public probe result on 2026-06-24:
 
-- `https://iu-hd.polyhydragames.com/` resolves through Cloudflare but returns
-  `HTTP/2 404` with GitHub Pages-style headers.
-- `https://iu-hd.polyhydragames.com/iu/` returns the same `HTTP/2 404`.
-- Cloudflare DNS has a proxied CNAME from `iu-hd.polyhydragames.com` to
-  `lancer1977.github.io`, which explains the GitHub Pages-style 404.
-- Direct-origin probe against `131.241.115.72` returns Traefik's plain 404 for
-  `iu-hd.polyhydragames.com`, confirming public ingress is reachable but no
-  matching Traefik router is deployed yet.
+- `https://iu-hd.polyhydragames.com/` returns `HTTP/2 200` through Cloudflare.
+- `https://iu-hd.polyhydragames.com/iu/` returns `HTTP/2 200` through Cloudflare.
+- Cloudflare DNS has a proxied `A` record from `iu-hd.polyhydragames.com` to
+  `131.241.115.72`.
+- R620 local Traefik probes for `/` and `/iu/` return `HTTP/2 200`.
 
-Fix requirements:
-
-- Point `iu-hd.polyhydragames.com` at the actual R620 ingress path.
-- Deploy `deploy/iu-hd/r620-compose.yml` on the R620 host with the expected
-  static site root.
-- Validate Traefik TLS routing to the Nginx container.
-
-Read-only R620 findings:
+R620 findings:
 
 - R620 is reachable at `192.168.0.21` as `dell-r620-1`.
 - `/home/lancer1977/servers/internetunderground` exists and contains the static
   archive entry files.
 - The `traefik-public` overlay network exists.
-- No `iu-hd` stack/service/container is currently deployed.
+- `iu-hd_web` is deployed with one running replica.
 - `docker-compose -f deploy/iu-hd/r620-compose.yml config` renders cleanly on
   R620; `docker compose` v2 is not installed there.
 - `./scripts/deploy-iu-hd-r620.sh` runs the R620 preflight without mutating the
