@@ -1,24 +1,8 @@
-html {
-	box-sizing: border-box;
-	background: #141414;
-}
-
-*, *::before, *::after {
-	box-sizing: inherit;
-}
-
 body {
 	margin: 0;
 	background:
 		radial-gradient(circle at top, rgba(80, 70, 120, 0.36), rgba(18, 18, 18, 0.96) 62%),
 		#141414;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: 18px;
-	line-height: 1.68;
-}
-
-a {
-	text-underline-offset: 0.12em;
 }
 
 body > table {
@@ -34,35 +18,10 @@ body > table > tbody > tr > td:nth-child(2) {
 	padding: 24px 28px 34px;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 img[src="imho-hd.png"] {
 	width: 270px;
 	height: auto;
 	image-rendering: auto;
-}
-
-font[size="5"] {
-	font-size: 2.15rem;
-	line-height: 1.15;
-}
-
-font[size="3"] {
-	font-size: 1.08rem;
-	line-height: 1.68;
-}
-
-font[size="2"] {
-	font-size: 1rem;
-	line-height: 1.62;
-}
-
-font[size="1"] {
-	font-size: 0.9rem;
-	line-height: 1.45;
 }
 
 @media (max-width: 760px) {

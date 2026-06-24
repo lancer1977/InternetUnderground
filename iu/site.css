@@ -1,0 +1,73 @@
+:root {
+	color-scheme: dark;
+}
+
+html {
+	box-sizing: border-box;
+	background: #050505;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 18px;
+	line-height: 1.65;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	text-underline-offset: 0.12em;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+td, th {
+	line-height: 1.45;
+}
+
+font[size="1"] {
+	font-size: 0.95rem;
+	line-height: 1.45;
+}
+
+font[size="2"] {
+	font-size: 1.08rem;
+	line-height: 1.55;
+}
+
+font[size="3"] {
+	font-size: 1.18rem;
+	line-height: 1.45;
+}
+
+font[size="4"] {
+	font-size: 1.38rem;
+	line-height: 1.25;
+}
+
+font[size="5"] {
+	font-size: 1.75rem;
+	line-height: 1.15;
+}
+
+font[size="6"] {
+	font-size: 2.2rem;
+	line-height: 1.08;
+}
+
+font[size="7"] {
+	font-size: 2.65rem;
+	line-height: 1.05;
+}
