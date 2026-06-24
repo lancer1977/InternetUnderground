@@ -5,26 +5,41 @@ intentional external references.
 
 ## Current Pass
 
-A full local HTML reference scan on 2026-06-24 checked 27,811 internal
-references and found 4,388 missing local targets before deduplication. The
-deduplicated finding count was 4,375. This is too broad to fix as part of the
-hosting enablement ticket, but it means issue #2 should not claim that all
-archive-relative links and assets are healthy yet. The follow-up work is
-tracked in GitHub issue #11.
+A full local HTML reference scan on 2026-06-24 initially checked 27,811
+internal references and found 4,388 missing local targets before
+deduplication. The deduplicated finding count was 4,375.
 
-Representative missing targets from that scan:
+The follow-up pass corrected the broad WebGuide path drift:
+
+- page-local `wghome-hd.png`, `wgsearch-hd.png`, and `wgback-hd.png`
+  references now point at `/iu/webguide/`
+- `/iu/webguide/tune/` references now point at `/iu/webguide/tunes/`
+- several obvious typo paths were corrected, including `/iu/nzvart/`,
+  `/iu/archives/issue1/twinkies`, malformed `index.htmlaf*` and
+  `index.htmlsz*` anchors, and `c_.pstyles.htm`
+
+After that pass, the scanner reports:
+
+- `checked_references=27830`
+- `missing_references=67`
+- `unique_missing_references=54`
+
+Representative remaining missing targets:
 
 - `iu/archive/issue1/onwith1/index.html` references missing
   `art/onwithr.gif`
 - `iu/archive/issue11/capn/index.html` references missing
   `/iu/online/unamail/`
-- `iu/archive/issue2/obscure/index.html` repeatedly references missing
-  `art/spacer.gif`
-- `iu/contact/index.html` references missing `/subfaq.htm`
+- `iu/archive/issue16/index.html` references missing issue section paths:
+  `faq16`, `onwith16`, and `schlock`
+- several issue archive pages reference missing local `art/spacer.gif`
 - `iu/online/reviews/games/diablo/index.html` references missing `dsc1.gif`
   and `dsc2.gif`
-- multiple `iu/webguide/culture/*.htm` pages reference missing
-  `/iu/webguide/tune/` and page-local navigation artwork
+- several WebGuide index pages reference historical review/detail pages that
+  are not present in the archive snapshot
+- several malformed or external-looking legacy references remain for manual
+  classification, such as `www.underground-online.com/...`,
+  `home.earthlink.net/...`, and `http;//...`
 
 The entry-point smoke path still passes locally for `/` and `/iu/`; this list is
 for deeper archive restoration follow-up.
