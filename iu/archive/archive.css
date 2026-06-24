@@ -1,0 +1,58 @@
+body {
+	margin: 0;
+	background: #454840;
+	color: #f0d060;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 18px;
+	line-height: 1.55;
+	--section-shell-width: 1040px;
+	--section-shell-padding: 24px 16px 56px;
+	--section-shell-padding-mobile: 14px 10px 36px;
+	--section-panel-bg: #000;
+	--section-panel-border: 1px solid rgba(255, 255, 255, 0.08);
+	--section-panel-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+a {
+	color: #fff3c6;
+}
+
+a:visited {
+	color: #e7d18f;
+}
+
+a:hover {
+	color: #ffffff;
+}
+
+.archive-panel {
+	padding: 18px 20px 28px;
+}
+
+.archive-panel font[size="7"] {
+	font-size: 3rem;
+	line-height: 1;
+}
+
+.archive-panel font[size="4"] {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+.archive-panel font[size="2"] {
+	font-size: 1rem;
+	line-height: 1.45;
+}
+
+.archive-list {
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+
+.archive-list td {
+	vertical-align: top;
+}
+
+.archive-list table {
+	width: 100%;
+}

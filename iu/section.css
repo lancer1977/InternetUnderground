@@ -1,0 +1,36 @@
+.section-shell {
+	max-width: var(--section-shell-width, 1120px);
+	margin: 0 auto;
+	padding: var(--section-shell-padding, 24px 18px 40px);
+}
+
+.section-panel {
+	background: var(--section-panel-bg, rgba(0, 0, 0, 0.8));
+	border: var(--section-panel-border, 1px solid rgba(255, 255, 255, 0.08));
+	box-shadow: var(--section-panel-shadow, 0 18px 48px rgba(0, 0, 0, 0.35));
+}
+
+.section-panel table {
+	border-collapse: collapse;
+}
+
+.section-panel td,
+.section-panel th {
+	vertical-align: top;
+}
+
+.section-panel img {
+	max-width: 100%;
+	height: auto;
+}
+
+.section-panel hr {
+	border: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 760px) {
+	.section-shell {
+		padding: var(--section-shell-padding-mobile, 14px 10px 36px);
+	}
+}

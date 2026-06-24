@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	background: radial-gradient(circle at top, #55514e 0, #454240 56%, #2e2b29 100%);
+	color: #d9d9d9;
+	--section-shell-width: 1120px;
+	--section-shell-padding: 28px 20px 58px;
+	--section-shell-padding-mobile: 14px 10px 36px;
+	--section-panel-bg: #000;
+	--section-panel-border: 1px solid rgba(255, 255, 255, 0.08);
+	--section-panel-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+a {
+	color: #ff8a6c;
+}
+
+a:visited {
+	color: #ff6f52;
+}
+
+a:hover {
+	color: #ffd2c7;
+}
+
+.contact-panel {
+	max-width: 860px;
+	margin: 0 auto;
+	padding: 22px 26px 32px;
+}
+
+.contact-intro {
+	max-width: 68ch;
+}
+
+.contact-list {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 16px 14px;
+}
+
+.contact-list td {
+	vertical-align: top;
+}
+
+.contact-list td:last-child {
+	padding-top: 6px;
+}
+
+.contact-nav img {
+	max-width: 100%;
+	height: auto;
+}

@@ -1,70 +1,69 @@
 body {
 	margin: 0;
-	background:
-		radial-gradient(circle at top, rgba(80, 70, 120, 0.36), rgba(18, 18, 18, 0.96) 62%),
-		#141414;
+	font-family: Arial, Helvetica, sans-serif;
+	--section-shell-width: 1060px;
+	--section-shell-padding: 24px 18px 40px;
+	--section-shell-padding-mobile: 14px 10px 36px;
+	--section-panel-bg: rgba(0, 0, 0, 0.8);
+	--section-panel-border: 1px solid rgba(255, 255, 255, 0.08);
+	--section-panel-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
 }
 
-body > table {
-	width: min(100% - 40px, 1040px);
-	margin: 28px auto 56px;
-	background: #000;
-	border: 1px solid rgba(255, 230, 150, 0.12);
-	box-shadow: 0 26px 70px rgba(0, 0, 0, 0.38);
+body.imho-theme-index {
+	background: #2e2f26;
+	color: #f3e8d8;
 }
 
-body > table > tbody > tr > td:nth-child(2) {
-	width: auto;
-	padding: 24px 28px 34px;
+body.imho-theme-index a {
+	color: #f2b94b;
 }
 
-img[src="imho-hd.png"] {
-	width: 270px;
-	height: auto;
-	image-rendering: auto;
+body.imho-theme-index a:visited {
+	color: #cbb3c7;
 }
 
-@media (max-width: 760px) {
-	html,
-	body {
-		max-width: 100%;
-		overflow-x: hidden;
-	}
+body.imho-theme-june {
+	background: #2e3d2f;
+	color: #f6e7b8;
+}
 
-	body > table {
-		width: 100%;
-		margin: 0;
-		border-left: 0;
-		border-right: 0;
-	}
+body.imho-theme-june a {
+	color: #f2b34c;
+}
 
-	body > table,
-	body > table > tbody,
-	body > table > tbody > tr,
-	body > table > tbody > tr > td {
-		display: block;
-		width: auto !important;
-	}
+body.imho-theme-june a:visited {
+	color: #d7a6c7;
+}
 
-	body > table > tbody > tr > td:first-child,
-	body > table > tbody > tr > td:last-child {
-		display: none;
-	}
+body.imho-theme-march {
+	background: #26283a;
+	color: #f3e3b6;
+}
 
-	body > table > tbody > tr > td:nth-child(2) {
-		padding: 18px 18px 30px;
-	}
+body.imho-theme-march a {
+	color: #f1a83c;
+}
 
-	table,
-	tbody,
-	tr,
-	td {
-		display: block;
-		width: auto !important;
-		max-width: 100%;
-	}
+body.imho-theme-march a:visited {
+	color: #d7a6a6;
+}
 
-	nobr {
-		white-space: normal;
-	}
+.imho-panel font {
+	line-height: 1.7;
+}
+
+.imho-panel font[size="5"] {
+	font-size: 2.2rem !important;
+}
+
+.imho-panel font[size="2"] {
+	font-size: 1rem !important;
+}
+
+.imho-panel hr {
+	border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.imho-panel td {
+	vertical-align: top;
 }

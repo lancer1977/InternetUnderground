@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	background: #3b4200;
+	color: #f5e7b0;
+	--section-shell-width: 1080px;
+	--section-shell-padding: 24px 18px 40px;
+	--section-shell-padding-mobile: 14px 10px 36px;
+	--section-panel-bg: rgba(0, 0, 0, 0.8);
+	--section-panel-border: 1px solid rgba(255, 255, 255, 0.08);
+	--section-panel-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+a {
+	color: #f0d34d;
+}
+
+a:visited {
+	color: #d7b7d7;
+}
+
+.wg-panel hr {
+	border-top: 1px solid rgba(255, 255, 255, 0.16);
+}

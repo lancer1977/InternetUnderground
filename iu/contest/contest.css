@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	background: #000;
+	color: #d9b36a;
+	--section-shell-width: 980px;
+	--section-shell-padding: 24px 16px 56px;
+	--section-shell-padding-mobile: 14px 10px 36px;
+	--section-panel-bg: #000;
+	--section-panel-border: 1px solid rgba(255, 255, 255, 0.08);
+	--section-panel-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+a {
+	color: #f6d58a;
+}
+
+a:visited {
+	color: #e1c16d;
+}
+
+a:hover {
+	color: #fff3bd;
+}
+
+.contest-panel {
+	padding: 18px 22px 32px;
+}
+
+.contest-panel font[size="6"] {
+	font-size: 2.8rem;
+	line-height: 1.05;
+}
+
+.contest-panel font[size="5"] {
+	font-size: 1.8rem;
+	line-height: 1.15;
+}
+
+.contest-panel font[size="4"] {
+	font-size: 1.4rem;
+	line-height: 1.2;
+}
+
+.contest-panel font[size="2"] {
+	font-size: 1rem;
+	line-height: 1.55;
+}
+
+.contest-panel font[size="1"] {
+	font-size: 0.9rem;
+	line-height: 1.45;
+}
