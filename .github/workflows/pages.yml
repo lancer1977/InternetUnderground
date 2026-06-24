@@ -28,10 +28,18 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Stage pages bundle
+        run: |
+          set -euo pipefail
+          rm -rf .pages-site
+          mkdir -p .pages-site
+          cp index.html u-o.gif CNAME .nojekyll .pages-site/
+          cp -R iu .pages-site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: .pages-site
 
       - name: Deploy to GitHub Pages
         id: deployment
