@@ -54,7 +54,8 @@ def validate_manifest() -> None:
     if not (ROOT / manifest["policy"]).exists():
         fail("manifest policy file is missing")
 
-    restored = 0
+    restored_articles = 0
+    restored_issue_pages = 0
     raw_only = 0
     for item in manifest.get("items", []):
         for field in ("id", "type", "title", "sourcePath", "status"):
@@ -63,14 +64,19 @@ def validate_manifest() -> None:
         if not path_exists(item["sourcePath"]):
             fail(f"missing sourcePath for {item['id']}: {item['sourcePath']}")
         if item["status"] in {"restored", "partial-restoration"}:
-            restored += 1
             if not item.get("modernPath") or not path_exists(item["modernPath"]):
                 fail(f"missing modernPath for {item['id']}")
+            if item["type"] == "article" and item["status"] == "restored":
+                restored_articles += 1
+            if item["type"] == "issue" and item["status"] == "partial-restoration":
+                restored_issue_pages += 1
         if item["status"] == "raw-only":
             raw_only += 1
 
-    if restored < 2:
-        fail("expected at least one restored article and one issue page")
+    if restored_articles < 3:
+        fail("expected at least three restored articles")
+    if restored_issue_pages < 1:
+        fail("expected at least one restored issue page")
     if raw_only < 1:
         fail("expected at least one raw-only inventory entry")
 
@@ -127,6 +133,8 @@ def validate_reader_html() -> None:
         ROOT / "reader" / "index.html",
         ROOT / "reader" / "issues" / "issue-08" / "index.html",
         ROOT / "reader" / "articles" / "issue-08-crash-test-dummies" / "index.html",
+        ROOT / "reader" / "articles" / "issue-08-deathnet" / "index.html",
+        ROOT / "reader" / "articles" / "issue-08-internet-impostors" / "index.html",
     ]:
         text = page.read_text(encoding="utf-8")
         if '<meta name="viewport"' not in text:

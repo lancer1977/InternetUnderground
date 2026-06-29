@@ -45,14 +45,45 @@
       "id": "issue-08-deathnet",
       "type": "article",
       "title": "The Art (and Science) of Dying Well",
+      "dek": "Death on the Net",
       "issue": "Issue 8",
       "section": "Features",
       "date": "1996-07",
       "sourcePath": "iu/archive/issue8/deathnet",
-      "status": "needs-conversion",
-      "notes": [
-        "Candidate for a later restored feature page."
-      ]
+      "modernPath": "reader/articles/issue-08-deathnet/",
+      "status": "restored",
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-article",
+        "digital-culture"
+      ],
+      "summary": "A restored Issue 8 feature on how early web communities used memorial pages, grief forums, and digital archives to process death online.",
+      "releaseNote": "Restored The Art (and Science) of Dying Well from Internet Underground Issue 8 with a mobile-first reader page and raw-source link."
+    },
+    {
+      "id": "issue-08-internet-impostors",
+      "type": "article",
+      "title": "Invasion of the Internet Impostors",
+      "dek": "When programs pretend to be people",
+      "issue": "Issue 8",
+      "section": "Features",
+      "date": "1996-07",
+      "sourcePath": "iu/archive/issue8/impostor/",
+      "modernPath": "reader/articles/issue-08-internet-impostors/",
+      "status": "restored",
+      "assets": [
+        "iu/archive/issue8/impostor/art/eyes1.gif",
+        "iu/archive/issue8/impostor/art/joseph.gif"
+      ],
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-article",
+        "ai-history"
+      ],
+      "summary": "A restored Issue 8 feature on ELIZA, Turing tests, Markov-chain personas, and early fears that online programs could pass as people.",
+      "releaseNote": "Restored Invasion of the Internet Impostors from Internet Underground Issue 8 with a mobile-first reader page and raw-source link."
     },
     {
       "id": "webguide",

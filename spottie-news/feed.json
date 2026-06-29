@@ -5,6 +5,46 @@
     {
       "source": "internet-underground-hd",
       "type": "article-restored",
+      "id": "issue-08-internet-impostors",
+      "title": "Invasion of the Internet Impostors",
+      "summary": "A restored Issue 8 feature on ELIZA, Turing tests, Markov-chain personas, and early fears that online programs could pass as people.",
+      "issue": "Issue 8",
+      "section": "Features",
+      "modernUrl": "reader/articles/issue-08-internet-impostors/",
+      "rawUrl": "iu/archive/issue8/impostor/",
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-article",
+        "ai-history"
+      ],
+      "publishedAt": "2026-06-29",
+      "releaseNote": "Restored Invasion of the Internet Impostors from Internet Underground Issue 8 with a mobile-first reader page and raw-source link.",
+      "restorationNote": "The raw article remains available unchanged at its source path."
+    },
+    {
+      "source": "internet-underground-hd",
+      "type": "article-restored",
+      "id": "issue-08-deathnet",
+      "title": "The Art (and Science) of Dying Well",
+      "summary": "A restored Issue 8 feature on how early web communities used memorial pages, grief forums, and digital archives to process death online.",
+      "issue": "Issue 8",
+      "section": "Features",
+      "modernUrl": "reader/articles/issue-08-deathnet/",
+      "rawUrl": "iu/archive/issue8/deathnet",
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-article",
+        "digital-culture"
+      ],
+      "publishedAt": "2026-06-29",
+      "releaseNote": "Restored The Art (and Science) of Dying Well from Internet Underground Issue 8 with a mobile-first reader page and raw-source link.",
+      "restorationNote": "The raw article remains available unchanged at its source path."
+    },
+    {
+      "source": "internet-underground-hd",
+      "type": "article-restored",
       "id": "issue-08-crash-test-dummies",
       "title": "Crash Test Dummies",
       "summary": "A restored Issue 8 feature on 1990s beta software culture and the way Internet distribution changed release quality.",
