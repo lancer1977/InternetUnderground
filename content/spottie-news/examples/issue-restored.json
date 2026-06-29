@@ -1,0 +1,19 @@
+{
+  "source": "internet-underground-hd",
+  "type": "issue-restored",
+  "id": "issue-08",
+  "title": "Internet Underground Issue 8",
+  "summary": "Issue 8 now has a modern table of contents that separates restored reader content from raw-only archive material.",
+  "issue": "Issue 8",
+  "section": "Milestone",
+  "modernUrl": "reader/issues/issue-08/",
+  "rawUrl": "iu/archive/issue8/",
+  "tags": [
+    "internet-underground",
+    "magazine-preservation",
+    "restored-issue"
+  ],
+  "publishedAt": "2026-06-29",
+  "releaseNote": "Opened the first Internet Underground HD issue page for Issue 8, with restored and pending article states clearly marked.",
+  "restorationNote": "This is a partial issue restoration; additional articles remain queued in the manifest."
+}

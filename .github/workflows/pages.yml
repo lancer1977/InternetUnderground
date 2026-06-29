@@ -28,6 +28,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Generate publishing artifacts
+        run: python3 scripts/generate-spottie-news.py
+
+      - name: Validate modern reader
+        run: python3 scripts/validate-modern-reader.py
+
       - name: Stage pages bundle
         run: |
           set -euo pipefail
@@ -35,6 +41,7 @@ jobs:
           mkdir -p .pages-site
           cp index.html u-o.gif .nojekyll CNAME .pages-site/
           cp -R iu .pages-site/
+          cp -R reader content spottie-news .pages-site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

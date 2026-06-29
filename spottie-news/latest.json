@@ -1,0 +1,20 @@
+{
+  "source": "internet-underground-hd",
+  "type": "article-restored",
+  "id": "issue-08-crash-test-dummies",
+  "title": "Crash Test Dummies",
+  "summary": "A restored Issue 8 feature on 1990s beta software culture and the way Internet distribution changed release quality.",
+  "issue": "Issue 8",
+  "section": "Features",
+  "modernUrl": "reader/articles/issue-08-crash-test-dummies/",
+  "rawUrl": "iu/archive/issue8/dummies/",
+  "tags": [
+    "internet-underground",
+    "magazine-preservation",
+    "restored-article",
+    "software-history"
+  ],
+  "publishedAt": "2026-06-29",
+  "releaseNote": "Restored Crash Test Dummies from Internet Underground Issue 8 with a mobile-first reader page and raw-source link.",
+  "restorationNote": "The raw article remains available unchanged at its source path."
+}

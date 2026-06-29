@@ -1,0 +1,69 @@
+{
+  "project": "internet-underground-hd",
+  "updatedAt": "2026-06-29",
+  "policy": "PRESERVATION_POLICY.md",
+  "items": [
+    {
+      "id": "issue-08",
+      "type": "issue",
+      "title": "Internet Underground Issue 8",
+      "issue": "Issue 8",
+      "date": "1996-07",
+      "sourcePath": "iu/archive/issue8/",
+      "modernPath": "reader/issues/issue-08/",
+      "status": "partial-restoration",
+      "notes": [
+        "First modern reader table of contents.",
+        "Raw issue page remains the source of truth for original navigation."
+      ]
+    },
+    {
+      "id": "issue-08-crash-test-dummies",
+      "type": "article",
+      "title": "Crash Test Dummies",
+      "dek": "Beta Blues",
+      "issue": "Issue 8",
+      "section": "Features",
+      "date": "1996-07",
+      "sourcePath": "iu/archive/issue8/dummies/",
+      "modernPath": "reader/articles/issue-08-crash-test-dummies/",
+      "status": "restored",
+      "assets": [
+        "iu/archive/issue8/dummies/art/browser.gif",
+        "iu/archive/issue8/dummies/art/coil.gif"
+      ],
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-article",
+        "software-history"
+      ],
+      "summary": "A restored Issue 8 feature on 1990s beta software culture and the way Internet distribution changed release quality.",
+      "releaseNote": "Restored Crash Test Dummies from Internet Underground Issue 8 with a mobile-first reader page and raw-source link."
+    },
+    {
+      "id": "issue-08-deathnet",
+      "type": "article",
+      "title": "The Art (and Science) of Dying Well",
+      "issue": "Issue 8",
+      "section": "Features",
+      "date": "1996-07",
+      "sourcePath": "iu/archive/issue8/deathnet",
+      "status": "needs-conversion",
+      "notes": [
+        "Candidate for a later restored feature page."
+      ]
+    },
+    {
+      "id": "webguide",
+      "type": "raw-directory",
+      "title": "WebGuide link directory",
+      "sourcePath": "iu/webguide/",
+      "status": "raw-only",
+      "notes": [
+        "Preserved as historical link-directory material.",
+        "Broken external links are expected and are not launch blockers for the modern reader."
+      ]
+    }
+  ]
+}

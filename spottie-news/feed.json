@@ -1,0 +1,45 @@
+{
+  "source": "internet-underground-hd",
+  "generatedAt": "2026-06-29",
+  "items": [
+    {
+      "source": "internet-underground-hd",
+      "type": "article-restored",
+      "id": "issue-08-crash-test-dummies",
+      "title": "Crash Test Dummies",
+      "summary": "A restored Issue 8 feature on 1990s beta software culture and the way Internet distribution changed release quality.",
+      "issue": "Issue 8",
+      "section": "Features",
+      "modernUrl": "reader/articles/issue-08-crash-test-dummies/",
+      "rawUrl": "iu/archive/issue8/dummies/",
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-article",
+        "software-history"
+      ],
+      "publishedAt": "2026-06-29",
+      "releaseNote": "Restored Crash Test Dummies from Internet Underground Issue 8 with a mobile-first reader page and raw-source link.",
+      "restorationNote": "The raw article remains available unchanged at its source path."
+    },
+    {
+      "source": "internet-underground-hd",
+      "type": "issue-restored",
+      "id": "issue-08",
+      "title": "Internet Underground Issue 8",
+      "summary": "Issue 8 now has a modern table of contents that separates restored reader content from raw-only archive material.",
+      "issue": "Issue 8",
+      "section": "Milestone",
+      "modernUrl": "reader/issues/issue-08/",
+      "rawUrl": "iu/archive/issue8/",
+      "tags": [
+        "internet-underground",
+        "magazine-preservation",
+        "restored-issue"
+      ],
+      "publishedAt": "2026-06-29",
+      "releaseNote": "Opened the first Internet Underground HD issue page for Issue 8, with restored and pending article states clearly marked.",
+      "restorationNote": "This is a partial issue restoration; additional articles remain queued in the manifest."
+    }
+  ]
+}

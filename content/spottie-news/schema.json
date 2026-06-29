@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Internet Underground HD Spottie News Payload",
+  "type": "object",
+  "required": [
+    "source",
+    "type",
+    "id",
+    "title",
+    "summary",
+    "modernUrl",
+    "rawUrl",
+    "tags",
+    "publishedAt",
+    "releaseNote"
+  ],
+  "properties": {
+    "source": {
+      "const": "internet-underground-hd"
+    },
+    "type": {
+      "enum": [
+        "article-restored",
+        "issue-restored",
+        "reader-update",
+        "archive-note"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "issue": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string"
+    },
+    "modernUrl": {
+      "type": "string"
+    },
+    "rawUrl": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "publishedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "releaseNote": {
+      "type": "string"
+    },
+    "restorationNote": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
