@@ -1,0 +1,129 @@
+{
+  "version": "preparedness/v1",
+  "scan_version": "1.0.0",
+  "generated_at": "2026-06-23T17:09:48.948824+00:00",
+  "repository_count": 1,
+  "overall": {
+    "readiness_score": 74,
+    "delta_readiness_score": 0,
+    "by_readiness": {
+      "ready": 0,
+      "in_progress": 1,
+      "needs_work": 0
+    },
+    "by_status": {
+      "ok": 0,
+      "warn": 1,
+      "missing": 0
+    },
+    "ci_attention": 0,
+    "branch_attention": 0,
+    "dirty_attention": 1
+  },
+  "open_cards": {
+    "total": 8,
+    "delta_total": 8,
+    "by_stage": {
+      "planning": 0,
+      "backlog": 8,
+      "spec": 0,
+      "doing": 0,
+      "review": 0,
+      "done": 0
+    }
+  },
+  "baseline_comparison": {
+    "available": false,
+    "baseline_path": ".devstudio/runtime/standards-scan/preparedness-baseline.json",
+    "generated_at": null,
+    "readiness_score": null,
+    "delta_readiness_score": null,
+    "open_cards": {
+      "total": null,
+      "delta_total": null
+    },
+    "regressions": []
+  },
+  "class_thresholds": {
+    "apps": 70,
+    "tooling": 60,
+    "library": 65,
+    "docs-only": 45
+  },
+  "alerts": {
+    "enabled": false,
+    "alert_count": 0,
+    "readiness_drop": []
+  },
+  "repositories": [
+    {
+      "path": "/mnt/data/lancer1977/code/InternetUnderground",
+      "readiness": "in_progress",
+      "readiness_score": 74,
+      "delta_readiness_score": 0,
+      "status": "warn",
+      "open_cards_total": 8,
+      "delta_open_cards_total": 0,
+      "repo_class": "tooling",
+      "repo_class_threshold": 60,
+      "repo_class_delta": 14,
+      "meets_repo_class_threshold": true,
+      "required_missing": [
+        "workflows"
+      ],
+      "doc_health": "ok",
+      "doc_health_score": 3,
+      "test_health": "warn",
+      "test_health_signals": 1,
+      "ci_health": {
+        "status": "ok",
+        "workflows": [
+          ".github/workflows/iu-hd-smoke.yml",
+          ".github/workflows/pages.yml"
+        ],
+        "recommendations": []
+      },
+      "branch_health": {
+        "status": "ok",
+        "branch": "haid-v1",
+        "head": "4be4636b8641350e3c0588721899924d36ed8180",
+        "head_age_days": 1,
+        "stale": false,
+        "detached": false,
+        "recommendations": []
+      },
+      "dirty_worktree": {
+        "status": "warn",
+        "dirty": true,
+        "changes": 4,
+        "untracked": 1,
+        "artifact_changes": 0,
+        "artifact_paths": [],
+        "recommendations": [
+          "There are 1 untracked files; decide whether they belong in the repo or should be stashed.",
+          "Commit, stash, or clean the worktree before starting the next slice."
+        ]
+      },
+      "issues": [
+        "dirty_worktree:warn",
+        "missing_recommended:.env.example",
+        "missing_recommended:runtime"
+      ]
+    }
+  ],
+  "top_action_items": [
+    {
+      "path": "/mnt/data/lancer1977/code/InternetUnderground",
+      "readiness": "in_progress",
+      "readiness_score": 74,
+      "open_cards_total": 8,
+      "repo_class": "tooling",
+      "repo_class_threshold": 60,
+      "issues": [
+        "dirty_worktree:warn",
+        "missing_recommended:.env.example",
+        "missing_recommended:runtime"
+      ]
+    }
+  ]
+}
