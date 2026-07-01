@@ -1,0 +1,161 @@
+{
+  "delivery": {
+    "changed": false,
+    "enabled": false,
+    "policy": "never",
+    "sent": false,
+    "state_file": "/mnt/data/lancer1977/code/InternetUnderground/.devstudio/runtime/codebase-snapshot/repo-health-state.json"
+  },
+  "generated_at": "2026-06-23T17:09:49.007604+00:00",
+  "model": {
+    "host": null,
+    "mode": "auto",
+    "name": "qwen2.5-coder:7b",
+    "used": false
+  },
+  "model_summary": "",
+  "premium": {
+    "host": "https://litellm.polyhydragames.com/v1",
+    "mode": "auto",
+    "name": "cloud/codex",
+    "used": false
+  },
+  "premium_summary": "",
+  "repositories": [
+    {
+      "dependency_health": {
+        "ecosystems": [],
+        "recommendations": [],
+        "status": "ok"
+      },
+      "dirty_worktree": {
+        "artifact_changes": 0,
+        "artifact_paths": [],
+        "changes": 4,
+        "dirty": true,
+        "recommendations": [
+          "There are 1 untracked files; decide whether they belong in the repo or should be stashed.",
+          "Commit, stash, or clean the worktree before starting the next slice."
+        ],
+        "status": "warn",
+        "untracked": 1
+      },
+      "dirty_worktree_artifact_changes": 0,
+      "dirty_worktree_artifact_paths": [],
+      "doc_health": "ok",
+      "freshness_pressure": 0,
+      "freshness_signals": [],
+      "issues": [
+        "dirty_worktree:warn",
+        "missing_recommended:.env.example",
+        "missing_recommended:runtime"
+      ],
+      "open_cards_total": 8,
+      "path": "/mnt/data/lancer1977/code/InternetUnderground",
+      "priority_score": 65,
+      "rank": 1,
+      "readiness": "in_progress",
+      "readiness_score": 74,
+      "recommendations": [
+        "Restore the required docs spine and make the repo's purpose/setup easy to find again.",
+        "Repair or document the native test command so the repo has a trusted validation path.",
+        "There are 1 untracked files; decide whether they belong in the repo or should be stashed.",
+        "Trim or split the open-card backlog so the repo health signal is easier to act on."
+      ],
+      "signal_count": 4,
+      "source_priority": 1,
+      "test_health": "warn",
+      "themes": [
+        "backlog",
+        "docs",
+        "tests",
+        "worktree"
+      ]
+    }
+  ],
+  "source": {
+    "focus_roots": [
+      "/mnt/data/lancer1977/code/InternetUnderground"
+    ],
+    "model_mode": "auto",
+    "model_used": false,
+    "ollama_host": null,
+    "ollama_model": null,
+    "premium_host": "https://litellm.polyhydragames.com/v1",
+    "premium_mode": "auto",
+    "premium_model": "cloud/codex",
+    "premium_used": false,
+    "preparedness_json": "/mnt/data/lancer1977/code/InternetUnderground/.devstudio/runtime/codebase-snapshot/preparedness.json"
+  },
+  "summary": {
+    "artifact_attention": 0,
+    "backlog_attention": 1,
+    "branch_attention": 0,
+    "ci_attention": 0,
+    "dependency_warn": 0,
+    "dependency_watch": 0,
+    "dirty_attention": 1,
+    "docs_attention": 1,
+    "focus_roots": [
+      "/mnt/data/lancer1977/code/InternetUnderground"
+    ],
+    "freshness_attention": 0,
+    "reviewed": 1,
+    "scanned_total": 1,
+    "scope_matched": 1,
+    "tests_attention": 1
+  },
+  "top_recommendations": [
+    {
+      "dependency_health": {
+        "ecosystems": [],
+        "recommendations": [],
+        "status": "ok"
+      },
+      "dirty_worktree": {
+        "artifact_changes": 0,
+        "artifact_paths": [],
+        "changes": 4,
+        "dirty": true,
+        "recommendations": [
+          "There are 1 untracked files; decide whether they belong in the repo or should be stashed.",
+          "Commit, stash, or clean the worktree before starting the next slice."
+        ],
+        "status": "warn",
+        "untracked": 1
+      },
+      "dirty_worktree_artifact_changes": 0,
+      "dirty_worktree_artifact_paths": [],
+      "doc_health": "ok",
+      "freshness_pressure": 0,
+      "freshness_signals": [],
+      "issues": [
+        "dirty_worktree:warn",
+        "missing_recommended:.env.example",
+        "missing_recommended:runtime"
+      ],
+      "open_cards_total": 8,
+      "path": "/mnt/data/lancer1977/code/InternetUnderground",
+      "priority_score": 65,
+      "rank": 1,
+      "readiness": "in_progress",
+      "readiness_score": 74,
+      "recommendations": [
+        "Restore the required docs spine and make the repo's purpose/setup easy to find again.",
+        "Repair or document the native test command so the repo has a trusted validation path.",
+        "There are 1 untracked files; decide whether they belong in the repo or should be stashed.",
+        "Trim or split the open-card backlog so the repo health signal is easier to act on."
+      ],
+      "signal_count": 4,
+      "source_priority": 1,
+      "test_health": "warn",
+      "themes": [
+        "backlog",
+        "docs",
+        "tests",
+        "worktree"
+      ]
+    }
+  ],
+  "version": "repo-health-advisor/v1"
+}
